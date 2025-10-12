@@ -49,6 +49,8 @@ const DraggableTask: React.FC<DraggableTaskProps> = ({ task, index, moveTask, ty
 
   drag(drop(ref));
 
+  if (isDragging && 0) return;
+
   return (
     <div ref={ref} className='drag-task'>
 
