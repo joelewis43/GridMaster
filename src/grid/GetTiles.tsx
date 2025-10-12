@@ -1,5 +1,5 @@
 import rawData from '../assets/tiles.json';
-import { type Task, Difficulty, type TileMap} from '../types';
+import { type Task, Difficulty, type TileMap, TaskType} from '../types';
 import { v4 as uuidv4 } from 'uuid';
 
 function GetGridMasterTiles() : TileMap {
@@ -15,7 +15,8 @@ function GetGridMasterTiles() : TileMap {
       task: entry.task,
       outputName: entry.title,
       outputValue: entry.reward,
-      difficulty: entry.difficulty as Difficulty
+      difficulty: entry.difficulty as Difficulty,
+      type: TaskType.Tile,
     };
 
     if (!tileMap[row]) {

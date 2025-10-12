@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { type Task, Difficulty } from '../types';
+import { type Task, Difficulty, TaskType } from '../types';
 import { v4 as uuidv4 } from 'uuid';
 
 interface TaskModalProps {
@@ -19,6 +19,8 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
       outputName: '',
       outputValue: '',
       difficulty: Difficulty.None,
+      type: TaskType.None,
+
     });
 
   useEffect(() => {
@@ -31,6 +33,7 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
           outputName: '',
           outputValue: '',
           difficulty: Difficulty.None,
+          type: TaskType.None,
         });
     }
   }, [show, initialTask]);
@@ -86,9 +89,20 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
               name="outputName"
               value={form.outputName}
               onChange={handleChange}
-              required
             />
           </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Task Type</Form.Label>
+            <Form.Select name="type" value={form.type} onChange={handleChange}>
+              {Object.entries(TaskType).map(([key, value]) => (
+                <option key={key} value={value}>
+                  {value}
+                </option>
+              ))}
+            </Form.Select>
+          </Form.Group>
+
 
           {/* Add any other shared fields here */}
         </Modal.Body>

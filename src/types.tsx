@@ -4,7 +4,8 @@ export interface Task {
   outputName: string,
   outputValue: string,
   difficulty: Difficulty,
-  id: string
+  id: string,
+  type: TaskType,
 }
 
 export enum Difficulty {
@@ -13,6 +14,13 @@ export enum Difficulty {
   Easy = 'Easy',
   Beginner = 'Beginner',
   None = 'None'
+}
+
+export enum TaskType {
+  Tile = 'Tile',
+  Travel = 'Travel',
+  Action = 'Action',
+  None = 'None',
 }
 
 export type TileMap = {

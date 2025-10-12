@@ -16,7 +16,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [tasks, setTasks] = useState<Task[]>([]);
 
   const addTask = (task: Task) => {
-    if (tasks.filter((t) => t.id === task.id).length > 0) return;
+    if (tasks.filter((t) => t.task === task.task).length > 0) return;
     setTasks(prev => [...prev, task]);
   };
 

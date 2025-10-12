@@ -34,11 +34,6 @@
   padding: 0 !important; /* remove all padding */
 }
 
-
-.tile-cell:hover {
-  background-color: #e9ecef; /* Slightly darker on hover */
-}
-
 .tile-filled {
   cursor: pointer;
 }

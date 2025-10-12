@@ -72,6 +72,14 @@
     "reward": "Select three gathering or support skills (from Mining, Fishing, Woodcutting, Hunter, Agility, Slayer, and Thieving).\nWhen you gain experience in one of your three selected skills you'll gain 50% of that experience in the other two skills."
   },
   {
+    "row": 6,
+    "col": 1,
+    "difficulty": "Hard",
+    "task": "Defeat all 4 Awakened bosses.",
+    "title": "Battlehat",
+    "reward": "A tribrid helmet with no negative bonuses, that also functions as a slayer helm"
+  },
+  {
     "row": 7,
     "col": 1,
     "difficulty": "Hard",
@@ -94,5 +102,74 @@
     "task": "Defeat the lesser demon in the Wizards’ Tower.",
     "title": "Minimum Potential",
     "reward": "Successful hits will never deal below 5 damage. It is still possible to miss attacks."
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "row": 2,
+    "col": 4,
+    "difficulty": "Easy",
+    "task": "** Get 500 total",
+    "title": "XP Multiplier buff",
+    "reward": "Speculative"
+  },
+  {
+    "row": 3,
+    "col": 4,
+    "difficulty": "Easy",
+    "task": "** Chop a maple tree",
+    "title": "Tier 1 relic",
+    "reward": "Speculative"
+  },
+  {
+    "row": 5,
+    "col": 4,
+    "difficulty": "Easy",
+    "task": "** Mine a gold ore",
+    "title": "Tier 1 relic",
+    "reward": "Speculative"
+  },
+  {
+    "row": 6,
+    "col": 4,
+    "difficulty": "Easy",
+    "task": "** Defeat Bryophyta",
+    "title": "Combat Mastery",
+    "reward": "Speculative"
+  },
+  {
+    "row": 4,
+    "col": 5,
+    "difficulty": "Easy",
+    "task": "** Complete the Stronghold of Security",
+    "title": "Tuna Potato Ring?",
+    "reward": "Speculative"
+  },
+  {
+    "row": 4,
+    "col": 7,
+    "difficulty": "Easy",
+    "task": "** Catch a Golden Warbler",
+    "title": "Friendly Forager",
+    "reward": "Speculative"
+  },
+  {
+    "row": 3,
+    "col": 3,
+    "difficulty": "Easy",
+    "task": "** Drink a Steamforge Brew",
+    "title": "Weird broodoo shield thing",
+    "reward": "Speculative"
   }
+
 ]

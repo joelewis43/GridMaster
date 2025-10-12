@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import update from 'immutability-helper';
 import type { Task } from '../types';
 import DraggableTask from './DraggableTask';
@@ -28,6 +28,9 @@ const TaskList: React.FC<TaskListProps> = ({ }) => {
     );
   }, []);
 
+  useEffect(() => {
+  }, [tasks]); // <- this runs when `dataId` changes
+
   const flipAddTask = () => { setShowAddTask(!showAddTask) }
   const flipEditTask = () => { setShowEditTask(!showEditTask) }
   const startEditTask = (task: Task) => {
@@ -45,7 +48,7 @@ const TaskList: React.FC<TaskListProps> = ({ }) => {
       </div>
       {tasks.map((task, index) => (
         <DraggableTask
-          key={index}
+          key={task.id ?? index}
           index={index}
           task={task}
           moveTask={moveTask}
@@ -54,8 +57,6 @@ const TaskList: React.FC<TaskListProps> = ({ }) => {
           editTask={startEditTask}
         />
       ))}
-      <hr/>
-      <textarea className='task-notes' />
 
       {/* used for add task */}
       <TaskModal show={showAddTask} onClose={flipAddTask} onSubmit={addTask} />

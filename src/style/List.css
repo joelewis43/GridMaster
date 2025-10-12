@@ -79,12 +79,20 @@
   color: #5e6eff;
 }
 
-
-
-
-
 .task-notes {
-  width: 100%;
+  width: 49%;
   height: 200px;
   color: #5e6eff;
+}
+
+.Tile-class {
+  background-color: #b0b8ff;
+}
+
+.Travel-class {
+  background-color: #b0ffbd;
+}
+
+.Action-class {
+  background-color: #ffc2b0;
 }

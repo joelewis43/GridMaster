@@ -14,6 +14,24 @@
 }
 
 .border-beginner {
-  border-color: #4891ff;
   background-color: #4891ff;
+  border-color: #4891ff;
+}
+
+
+
+.border-hard:hover {
+  background-color: #eb7d88;
+}
+
+.border-medium:hover {
+  background-color: #ffde7c;
+}
+
+.border-easy:hover {
+  background-color: #67f3b2;
+}
+
+.border-beginner:hover {
+  background-color: #75acff;
 }

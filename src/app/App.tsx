@@ -13,6 +13,11 @@ function App() {
         <div className="app-container">
           <div className="grid-parent">
             <Grid tileMap={GetGridMasterTiles()} />
+            <hr/>
+            <div style={{ display: 'flex', gap: '20px' }}>
+              <textarea className='task-notes' />
+              <textarea className='task-notes' />
+            </div>
           </div>
           <div className="list-parent">
             <TaskList />
