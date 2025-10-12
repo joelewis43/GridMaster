@@ -19,6 +19,7 @@
 
 .col {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  user-select: none;
 }
 
 .row {
@@ -26,7 +27,6 @@
 }
 
 .tile-text {
-  user-select: none;
   margin: 0 auto;
 }
 
@@ -42,3 +42,7 @@
   cursor: default;
 }
 
+.task-done {
+  background-color: gray !important;
+  border-color: black !important;
+}

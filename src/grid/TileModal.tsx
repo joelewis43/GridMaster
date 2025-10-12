@@ -27,6 +27,9 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose, addTask }) =
         <Button variant='secondary' onClick={() => addTask(tile)}>
           Add to List
         </Button>
+        <Button variant='secondary' onClick={() => {tile.done = !tile.done; onClose();}}>
+          Mark complete
+        </Button>
       </Modal.Footer>
     </Modal>
   );

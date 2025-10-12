@@ -6,6 +6,7 @@ export interface Task {
   difficulty: Difficulty,
   id: string,
   type: TaskType,
+  done: boolean,
 }
 
 export enum Difficulty {

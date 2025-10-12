@@ -12,15 +12,16 @@ const TaskCell: React.FC<TaskCellProps> = ({ task, onClick }) => {
   const { addTask } = useTaskContext();
   const clickTimeout = useRef<number | null>(null);
 
-  const getClasses = (task: Task) => {
+  const getClasses = () => {
     return (
       `tile-cell
         ${task ? 'tile-filled' : 'tile-empty'}
-        ${task ? `border-${task.difficulty.toLowerCase()}` : ''}`
+        ${task ? `border-${task.difficulty.toLowerCase()}` : ''}
+        ${task != undefined ? (task.done ? 'task-done' : '') : ''}`
     );
   };
 
-  const getTaskContent = (task: Task) => {
+  const getTaskContent = () => {
     if (task) {
       return <p className="tile-text">{task.task}</p>;
     }
@@ -55,8 +56,8 @@ const TaskCell: React.FC<TaskCellProps> = ({ task, onClick }) => {
   };
 
   return (
-    <Col className={getClasses(task)} onClick={handleClick} onDoubleClick={handleDoubleClick}>
-      {getTaskContent(task)}
+    <Col className={getClasses()} onClick={handleClick} onDoubleClick={handleDoubleClick}>
+      {getTaskContent()}
     </Col>
   );
 };

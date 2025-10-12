@@ -20,7 +20,7 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
       outputValue: '',
       difficulty: Difficulty.None,
       type: TaskType.None,
-
+      done: false,
     });
 
   useEffect(() => {
@@ -34,6 +34,7 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
           outputValue: '',
           difficulty: Difficulty.None,
           type: TaskType.None,
+          done: false,
         });
     }
   }, [show, initialTask]);
