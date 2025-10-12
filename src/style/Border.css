@@ -1,0 +1,19 @@
+.border-hard {
+  border-color: #eb5f6d;
+  background-color: #eb5f6d;
+}
+
+.border-medium {
+  border-color: #ffc107;
+  background-color: #ffc107;
+}
+
+.border-easy {
+  border-color: #2ed688;
+  background-color: #2ed688;
+}
+
+.border-beginner {
+  border-color: #4891ff;
+  background-color: #4891ff;
+}

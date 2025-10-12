@@ -1,0 +1,90 @@
+.task-controls {
+  /* background-color: #f8f9fa; */
+  /* Light Bootstrap-like gray */
+  margin: 0 auto;
+  margin-bottom: 8px;
+
+  text-align: center;
+  justify-content: left;
+  align-items: center;
+
+  display: flex;
+}
+
+.task-controls Button {
+  margin-left: 8px;
+}
+
+.task-list-header {
+  display: flex;
+}
+
+.drag-task {
+  display: flex;
+
+  cursor: move;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* height: 30px; */
+}
+
+.input-body {
+  width: 25%;
+  text-align: left;
+}
+
+.input-body p {
+  margin: 0 auto;
+}
+
+.task-body {
+  width: 45%;
+  text-align: left;
+}
+
+.task-body p {
+  margin: 0 auto;
+  padding-left: 5px;
+}
+
+.reward-body {
+  width: 20%;
+  text-align: left;
+}
+
+.reward-body p {
+  margin: 0 auto;
+}
+
+.button-container {
+  margin: 0 auto;
+}
+
+.button-container button {
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.delete-task {
+  color: #dc3545;
+}
+
+.update-task {
+  color: #5e6eff;
+}
+
+
+
+
+
+.task-notes {
+  width: 100%;
+  height: 200px;
+  color: #5e6eff;
+}

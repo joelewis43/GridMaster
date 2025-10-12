@@ -1,0 +1,98 @@
+[
+  {
+    "row": 1,
+    "col": 4,
+    "difficulty": "Easy",
+    "task": "Kill an Ogress.",
+    "title": "Combatant",
+    "reward": "Select three combat skills (from Attack, Strength, Defence, Hitpoints, Ranged, Magic, or Prayer).\nWhen you gain experience in one of your three selected skills you'll gain 50% of that experience in the other two skills."
+  },
+  {
+    "row": 1,
+    "col": 5,
+    "difficulty": "Medium",
+    "task": "Defeat Jal‑Zek within the Inferno.",
+    "title": "Slayer Master",
+    "reward": "Always be on‑task for all Slayer monsters and unlock all slayer task perks for free.\nGain 1000‑15,000 bonus Slayer XP for the first time you kill the 100th of each unique slayer monster, scaled by the monster's slayer level requirement (XP stated is before multipliers)."
+  },
+  {
+    "row": 2,
+    "col": 5,
+    "difficulty": "Medium",
+    "task": "Cook a shark while wearing a chef's hat.",
+    "title": "Corrupted Shark",
+    "reward": "A shark that isn't consumed when eaten. Heals a base of 20 hitpoints."
+  },
+  {
+    "row": 2,
+    "col": 7,
+    "difficulty": "Hard",
+    "task": "Complete the Inferno in 30 minutes or less.",
+    "title": "Guardian Thrall",
+    "reward": "Summon a powerful thrall lasting for 30 minutes. The guardian will attack your target with whatever style it is weak to."
+  },
+  {
+    "row": 3,
+    "col": 1,
+    "difficulty": "Medium",
+    "task": "Obtain some Valuables from a house in Varlamore.",
+    "title": "Golden God",
+    "reward": "High and Low Level Alchemy spells have no rune cost or level requirements.\nItems give 15% more gold and have a 65% chance to not be consumed when the spell is cast.\n20,000 coins can be offered at Prayer altars in exchange for Prayer XP equivalent to using a dragon bone."
+  },
+  {
+    "row": 4,
+    "col": 1,
+    "difficulty": "Easy",
+    "task": "Gain over 30,000 coins from one Alchemy spell.",
+    "title": "Production Prodigy",
+    "reward": "When doing specific skilling activities, all items are processed at once, with a chance to make an extra product. Artisan skills also receive a permanent +12 boost."
+  },
+  {
+    "row": 4,
+    "col": 4,
+    "difficulty": "Beginner",
+    "task": "Complete the Grid Master tutorial.",
+    "title": "Power Miner",
+    "reward": "This pickaxe will act as a non-degradable variant of the crystal equivalent with no requirements. When this item is in your inventory or equipped, you gain the following perks:\n- On failing to mine a rock, you will have a separate 50% chance to succeed.\n- Items gathered from Mining are automatically sent to your Bank.\n- The Echo Pickaxe will cause the rock to not deplete until you have mined 4 ore. This buff does stack with the existing Mining Gloves, with a cap of 7 ores from a given node.\n\nYou will be able to toggle the following effects on or off for the Pickaxe:\n- Collected ores are automatically smelted and grant Smithing XP (regardless of your smithing level)\n- Gems gathered from Mining are automatically cut and grant Crafting XP (regardless of your Crafting level)."
+  },
+  {
+    "row": 5,
+    "col": 3,
+    "difficulty": "Easy",
+    "task": "Subdue Tempoross.",
+    "title": "Craftsman",
+    "reward": "Select three artisan skills (from Construction, Cooking, Crafting, Firemaking, Fletching, Herblore, Runecraft, and Smithing).\nWhen you gain experience in one of your three selected skills you'll gain 50% of that experience in the other two skills."
+  },
+  {
+    "row": 5,
+    "col": 5,
+    "difficulty": "Easy",
+    "task": "Witness the gemstone crab burrow away.",
+    "title": "Gatherer",
+    "reward": "Select three gathering or support skills (from Mining, Fishing, Woodcutting, Hunter, Agility, Slayer, and Thieving).\nWhen you gain experience in one of your three selected skills you'll gain 50% of that experience in the other two skills."
+  },
+  {
+    "row": 7,
+    "col": 1,
+    "difficulty": "Hard",
+    "task": "Obtain a rare unique from Tombs of Amascut.",
+    "title": "Raids megarare voucher",
+    "reward": "redeemable for one of the following:\nTwisted bow\nScythe of Vitur\nTumeken’s shadow"
+  },
+  {
+    "row": 7,
+    "col": 2,
+    "difficulty": "Hard",
+    "task": "Build a demonic throne in your player‑owned house.",
+    "title": "Thunder khopesh",
+    "reward": "One‑handed slash/stab melee weapon that deals full damage to the Corporeal Beast.\nHas a 20% chance to trigger an AoE lightning bolt under the target, hitting anything in a 1 tile radius, which rolls with 50% of the original attack's max hit.\nSpecial attack (Costs 50%): Attacks twice. If either attack is successful an additional lightning bolt is summoned rolling up to 100% of the original attack's max hit."
+  },
+  {
+    "row": 7,
+    "col": 4,
+    "difficulty": "Easy",
+    "task": "Defeat the lesser demon in the Wizards’ Tower.",
+    "title": "Minimum Potential",
+    "reward": "Successful hits will never deal below 5 damage. It is still possible to miss attacks."
+  }
+]

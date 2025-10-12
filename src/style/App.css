@@ -1,0 +1,23 @@
+#root {
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+  background-color:cadetblue;
+  box-shadow: 0 18px 18px rgba(0, 0, 0, 1);
+  padding: 10px;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Optional: take full viewport height */
+  gap: 16px; /* Optional: space between grid and list */
+}
+
+.grid-parent {
+  width: 60%;
+}
+
+.list-parent {
+  width: 40%;
+}
