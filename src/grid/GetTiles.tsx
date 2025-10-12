@@ -17,6 +17,7 @@ function GetGridMasterTiles() : TileMap {
       outputValue: entry.reward,
       difficulty: entry.difficulty as Difficulty,
       type: TaskType.Tile,
+      done: false,
     };
 
     if (!tileMap[row]) {
