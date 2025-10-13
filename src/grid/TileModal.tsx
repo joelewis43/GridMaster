@@ -33,7 +33,7 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose }) => {
         </Button>
         {/* This is a temp button until the planned variable is toggled via adding to list */}
         <Button variant='secondary' onClick={() => {tile.planned = !tile.planned; onClose();}}>
-          Mark complete
+          Toggle Planned
         </Button>
       </Modal.Footer>
     </Modal>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { type Task, Difficulty, TaskType } from '../types';
-import { v4 as uuidv5 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 interface TaskModalProps {
   show: boolean;
@@ -13,19 +13,19 @@ interface TaskModalProps {
 const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialTask }) => {
   const [form, setForm] = useState<Task>(() =>
     initialTask ?? {
-      id: uuidv5(),
-          task: '',
-          input: '',
-          outputName: '',
-          outputValue: '',
-          type: TaskType.None,
+      id: uuidv4(),
+      task: '',
+      input: '',
+      outputName: '',
+      outputValue: '',
+      type: TaskType.None,
     });
 
   useEffect(() => {
     if (show) {
       setForm(
         initialTask ?? {
-          id: uuidv5(),
+          id: uuidv4(),
           task: '',
           input: '',
           outputName: '',
