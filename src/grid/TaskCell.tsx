@@ -17,7 +17,7 @@ const TaskCell: React.FC<TaskCellProps> = ({ task, onClick }) => {
       `tile-cell
         ${task ? 'tile-filled' : 'tile-empty'}
         ${task ? `border-${task.difficulty.toLowerCase()}` : ''}
-        ${task != undefined ? (task.done ? 'task-done' : '') : ''}`
+        ${task != undefined ? (task.planned ? 'task-planned' : '') : ''}`
     );
   };
 

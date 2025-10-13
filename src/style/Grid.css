@@ -42,7 +42,7 @@
   cursor: default;
 }
 
-.task-done {
+.task-planned {
   background-color: gray !important;
   border-color: black !important;
 }

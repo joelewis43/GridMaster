@@ -27,7 +27,8 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose, addTask }) =
         <Button variant='secondary' onClick={() => addTask(tile)}>
           Add to List
         </Button>
-        <Button variant='secondary' onClick={() => {tile.done = !tile.done; onClose();}}>
+        {/* This is a temp button until the planned variable is toggled via adding to list */}
+        <Button variant='secondary' onClick={() => {tile.planned = !tile.planned; onClose();}}>
           Mark complete
         </Button>
       </Modal.Footer>
