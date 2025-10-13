@@ -1,5 +1,4 @@
 import Grid from '../grid/Grid'
-import GetGridMasterTiles from '../grid/GetTiles'
 
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -12,7 +11,7 @@ function App() {
       <TaskProvider>
         <div className="app-container">
           <div className="grid-parent">
-            <Grid tileMap={GetGridMasterTiles()} />
+            <Grid />
             <hr/>
             <div style={{ display: 'flex', gap: '20px' }}>
               <textarea className='task-notes' />

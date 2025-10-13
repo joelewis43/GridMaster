@@ -1,35 +1,35 @@
 import React, { useRef } from 'react';
 import { Col } from 'react-bootstrap';
-import type { Task } from '../types';
+import type { GridTile, Task } from '../types';
 import { useTaskContext } from '../TaskProvider';
 
-interface TaskCellProps {
-  task: Task;
-  onClick: (task: Task) => void;
+interface GridCellProps {
+  tile: GridTile;
+  onClick: (tile: GridTile) => void;
 }
 
-const TaskCell: React.FC<TaskCellProps> = ({ task, onClick }) => {
-  const { addTask } = useTaskContext();
+const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
+  const { addTileToList } = useTaskContext();
   const clickTimeout = useRef<number | null>(null);
 
   const getClasses = () => {
     return (
       `tile-cell
-        ${task ? 'tile-filled' : 'tile-empty'}
-        ${task ? `border-${task.difficulty.toLowerCase()}` : ''}
-        ${task != undefined ? (task.planned ? 'task-planned' : '') : ''}`
+        ${tile ? 'tile-filled' : 'tile-empty'}
+        ${tile ? `border-${tile.difficulty.toLowerCase()}` : ''}
+        ${tile != undefined ? (tile.planned ? 'task-planned' : '') : ''}`
     );
   };
 
   const getTaskContent = () => {
-    if (task) {
-      return <p className="tile-text">{task.task}</p>;
+    if (tile) {
+      return <p className="tile-text">{tile.name}</p>;
     }
     return <span className="text-muted">—</span>;
   };
 
   const handleClick = () => {
-    if (!task) return;
+    if (!tile) return;
     
     // Clear any existing timeout
     if (clickTimeout.current !== null) {
@@ -38,13 +38,13 @@ const TaskCell: React.FC<TaskCellProps> = ({ task, onClick }) => {
     
     // Set a new timeout with longer delay (300ms is safe for double-clicks)
     clickTimeout.current = setTimeout(() => {
-      onClick(task);
+      onClick(tile);
       clickTimeout.current = null;
     }, 200);
   };
 
   const handleDoubleClick = () => {
-    if (!task) return;
+    if (!tile) return;
     
     // Cancel the pending single click
     if (clickTimeout.current !== null) {
@@ -52,7 +52,7 @@ const TaskCell: React.FC<TaskCellProps> = ({ task, onClick }) => {
       clickTimeout.current = null;
     }
    
-    addTask(task);
+    addTileToList(tile);
   };
 
   return (
@@ -62,4 +62,4 @@ const TaskCell: React.FC<TaskCellProps> = ({ task, onClick }) => {
   );
 };
 
-export default TaskCell;
+export default GridCell;

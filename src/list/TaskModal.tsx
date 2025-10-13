@@ -1,40 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { type Task, Difficulty, TaskType } from '../types';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv5 } from 'uuid';
 
 interface TaskModalProps {
   show: boolean;
   onClose: () => void;
   onSubmit: (task: Task) => void;
-  initialTask?: Task; // present for edit operations
+  initialTask?: Task; // Used for edit operations
 }
 
 const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialTask }) => {
   const [form, setForm] = useState<Task>(() =>
     initialTask ?? {
-      id: uuidv4(),
-      task: '',
-      input: '',
-      outputName: '',
-      outputValue: '',
-      difficulty: Difficulty.None,
-      type: TaskType.None,
-      planned: false,
+      id: uuidv5(),
+          task: '',
+          input: '',
+          outputName: '',
+          outputValue: '',
+          type: TaskType.None,
     });
 
   useEffect(() => {
     if (show) {
       setForm(
         initialTask ?? {
-          id: uuidv4(),
+          id: uuidv5(),
           task: '',
           input: '',
           outputName: '',
           outputValue: '',
-          difficulty: Difficulty.None,
           type: TaskType.None,
-          planned: false,
         });
     }
   }, [show, initialTask]);
@@ -61,6 +57,7 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
         <Modal.Header closeButton>
           <Modal.Title>{isEditing ? 'Edit Task' : 'Add Task'}</Modal.Title>
         </Modal.Header>
+
         <Modal.Body>
           <Form.Group className="mb-3">
             <Form.Label>Task</Form.Label>
@@ -72,7 +69,6 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
               required
             />
           </Form.Group>
-
           <Form.Group className="mb-3">
             <Form.Label>Input</Form.Label>
             <Form.Control
@@ -82,7 +78,6 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
               onChange={handleChange}
             />
           </Form.Group>
-
           <Form.Group className="mb-3">
             <Form.Label>Reward/Output</Form.Label>
             <Form.Control
@@ -92,7 +87,6 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
               onChange={handleChange}
             />
           </Form.Group>
-
           <Form.Group className="mb-3">
             <Form.Label>Task Type</Form.Label>
             <Form.Select name="type" value={form.type} onChange={handleChange}>
@@ -103,10 +97,8 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
               ))}
             </Form.Select>
           </Form.Group>
-
-
-          {/* Add any other shared fields here */}
         </Modal.Body>
+
         <Modal.Footer>
           <Button variant="secondary" onClick={onClose}>
             Cancel
