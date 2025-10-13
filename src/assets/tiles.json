@@ -103,49 +103,37 @@
     "title": "Minimum Potential",
     "reward": "Successful hits will never deal below 5 damage. It is still possible to miss attacks."
   },
-
-
-
-
-
-
-
-
-
-
-
-
   {
     "row": 2,
     "col": 4,
     "difficulty": "Easy",
-    "task": "** Get 500 total",
-    "title": "XP Multiplier buff",
-    "reward": "Speculative"
+    "task": "Reach 500 total level.",
+    "title": "XP Lamp",
+    "reward": "An experience lamp containing 25,000 XP to be used on any skill."
   },
   {
     "row": 3,
     "col": 4,
     "difficulty": "Easy",
-    "task": "** Chop a maple tree",
-    "title": "Tier 1 relic",
-    "reward": "Speculative"
+    "task": "Chop Maple Logs.",
+    "title": "Tier 1 Relic Choice",
+    "reward": "Wrangler"
   },
   {
     "row": 5,
     "col": 4,
     "difficulty": "Easy",
-    "task": "** Mine a gold ore",
-    "title": "Tier 1 relic",
-    "reward": "Speculative"
+    "task": "Mine Gold Ore",
+    "title": "Tier 1 Relic Choice",
+    "reward": "Jacker"
   },
   {
     "row": 6,
     "col": 4,
     "difficulty": "Easy",
-    "task": "** Defeat Bryophyta",
+    "task": "Open Bryophyta's Chest.",
     "title": "Combat Mastery",
-    "reward": "Speculative"
+    "reward": "All Combat Masteries increase by 1 tier.\n- Melee I: Melee hits have a 25% chance to roll damage twice and take the highest result.\n- Ranged I: Damage rolls beneath 30% of max hit with Ranged are increased to 30%.\n- Magic I: When you roll above 90% of your max hit with Magic, damage is increased by 50%.\n- Passive: 95% chance to save weapon charges, ammunition, and runes used for spells."
   },
   {
     "row": 4,
