@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import type { GridTile, Task, TileMap } from '../types'
+import type { GridTile, TileMap } from '../types'
 import TileModal from './TileModal';
 import { useTaskContext } from '../TaskProvider';
 import GridCell from './GridCell';

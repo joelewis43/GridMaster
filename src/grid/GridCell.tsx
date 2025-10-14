@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Col } from 'react-bootstrap';
-import type { GridTile, Task } from '../types';
+import type { GridTile } from '../types';
 import { useTaskContext } from '../TaskProvider';
 
 interface GridCellProps {
