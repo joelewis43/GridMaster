@@ -28,7 +28,7 @@ const Grid: React.FC<GridProps> = ({ }) => {
           const col = colIndex + 1;
           const tile = tileMap[row]?.[col];
 
-          return <GridCell tile={tile} onClick={handleTileClick} />
+          return <GridCell key={tile?.id ?? `${row}-${col}`} tile={tile} onClick={handleTileClick} />
         })}
       </Row>
     );

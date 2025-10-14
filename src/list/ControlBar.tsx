@@ -5,17 +5,19 @@ import type { Task } from '../types';
 import ImportButton from './ImportButton';
 import { FaQuestionCircle } from "react-icons/fa";
 import HelpModal from './HelpModal';
+import { useTaskContext } from '../TaskProvider';
 
 interface ControlBarProps {
   openAddTask: Function,
-  importTask: (tasks: Task[]) => void,
   tasksForExport: Task[],
 }
 
-const ControlBar: React.FC<ControlBarProps> = ({ openAddTask, importTask, tasksForExport }) => {
+const ControlBar: React.FC<ControlBarProps> = ({ openAddTask, tasksForExport }) => {
   const [showHelpModal, setShowHelpModal] = useState(false);
 
   const flipHelpModal = () => {setShowHelpModal(!showHelpModal)}
+
+  const { importTask } = useTaskContext();
   
 
   return (

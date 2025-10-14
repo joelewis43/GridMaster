@@ -51,8 +51,6 @@ const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
       clearTimeout(clickTimeout.current);
       clickTimeout.current = null;
     }
-   
-    tile.planned = true;
     addTileToList(tile);
   };
 

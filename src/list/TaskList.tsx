@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import update from 'immutability-helper';
 import type { Task } from '../types';
 import DraggableTask from './DraggableTask';
@@ -12,7 +12,7 @@ interface TaskListProps {
 }
 
 const TaskList: React.FC<TaskListProps> = ({ }) => {
-  const { taskList, setTaskList, addTask, editTask, deleteTask, importTask } = useTaskContext();
+  const { taskList, setTaskList, addTask, editTask, deleteTask } = useTaskContext();
   const [showAddTask, setShowAddTask] = useState(false);
   const [showEditTask, setShowEditTask] = useState(false);
   const [selectedTask, setSelectedTask] = useState<Task>();
@@ -28,9 +28,6 @@ const TaskList: React.FC<TaskListProps> = ({ }) => {
     );
   }, []);
 
-  useEffect(() => {
-  }, [taskList]); // <- this runs when `dataId` changes
-
   const flipAddTask = () => { setShowAddTask(!showAddTask) }
   const flipEditTask = () => { setShowEditTask(!showEditTask) }
   const startEditTask = (task: Task) => {
@@ -40,7 +37,7 @@ const TaskList: React.FC<TaskListProps> = ({ }) => {
 
   return (
     <div>
-      <ControlBar openAddTask={flipAddTask} importTask={importTask} tasksForExport={taskList} />
+      <ControlBar openAddTask={flipAddTask} tasksForExport={taskList} />
       <div className='task-list-header'>
         <h4 className='task-body'>Task</h4>
         <h4 className='input-body'>Input</h4>
@@ -48,7 +45,7 @@ const TaskList: React.FC<TaskListProps> = ({ }) => {
       </div>
       {taskList.map((task, index) => (
         <DraggableTask
-          key={index}
+          key={task.id}
           index={index}
           task={task}
           moveTask={moveTask}

@@ -36,6 +36,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
       type: TaskType.Tile,
     }
     setTaskList(prev => [...prev, newTask]);
+    setGridPlanned(tile.id, true);
   }
 
   const editTask = (updatedTask: Task) => {
@@ -46,9 +47,29 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const deleteTask = (id: string) => {
     setTaskList((prev) => prev.filter(task => task.id !== id));
+    setGridPlanned(id, false);
   };
 
-  const importTask = (tasks: Task[]) => { setTaskList(tasks) }
+  const importTask = (tasks: Task[]) => {
+    setTaskList(tasks);
+    for (const task of tasks) {
+      setGridPlanned(task.id, true);
+    }
+  }
+
+  const setGridPlanned = (id: string, b: boolean) => {
+    setGrid((prevGrid) => {
+      for (const row of Object.values(prevGrid)) {
+        for (const tile of Object.values(row)) {
+          if (tile.id === id) {
+            tile.planned = b;
+            console.log("tile matched - planned updated to " + b);
+          }
+        }
+      }
+      return { ...prevGrid };
+    });
+  }
 
   return (
     <TaskContext.Provider value={{ taskList, grid, setTaskList, addTask, addTileToList, editTask, deleteTask, importTask }}>
