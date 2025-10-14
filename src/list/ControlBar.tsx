@@ -27,7 +27,7 @@ const ControlBar: React.FC<ControlBarProps> = ({ openAddTask, tasksForExport }) 
       </Button>
       <ImportButton onImport={importTask} />
       <ExportButton tasks={tasksForExport} />
-      <Button variant='secondary' onClick={() => flipHelpModal()}>
+      <Button className='ms-auto' variant='secondary' onClick={() => flipHelpModal()}>
         <FaQuestionCircle/>
       </Button>
 
