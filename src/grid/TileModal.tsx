@@ -24,7 +24,7 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose }) => {
 
       <Modal.Body>
         <h4>{tile.rewardName}</h4>
-        <p>{tile.rewardDescription || 'No reward data available.'}</p>
+        <p>{tile.rewardDescription || 'No reward description is available.'}</p>
       </Modal.Body>
 
       <Modal.Footer>

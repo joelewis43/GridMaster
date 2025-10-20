@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Col } from 'react-bootstrap';
 import type { GridTile } from '../types';
 import { useTaskContext } from '../TaskProvider';
+import Icon from '../icon/Icon';
 
 interface GridCellProps {
   tile: GridTile;
@@ -58,7 +59,7 @@ const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
 
   return (
     <Col className={getClasses()} onClick={handleClick} onDoubleClick={handleDoubleClick}>
-      {getTaskContent()}
+      <Icon row={tile.row} col={tile.col} opaque={tile.planned} description={tile.taskName}/>
     </Col>
   );
 };

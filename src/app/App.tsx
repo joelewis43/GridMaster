@@ -1,5 +1,4 @@
 import Grid from '../grid/Grid'
-
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import TaskList from '../list/TaskList';
