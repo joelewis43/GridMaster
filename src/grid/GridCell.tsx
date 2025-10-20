@@ -23,7 +23,9 @@ const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
 
   const getTaskContent = () => {
     if (tile) {
-      return <p className="tile-text">{tile.name}</p>;
+      const tileImage = `tasks/50px-Grid_Master_tile_(R${tile.row}T${tile.col}).png`
+      const tileImageClass = `${tile != undefined ? (tile.planned ? 'tile-planned' : '') : ''}`
+      return <img src={tileImage} className={tileImageClass}/>
     }
     return <span className="text-muted">—</span>;
   };

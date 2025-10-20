@@ -1,8 +1,7 @@
 Using the below html table, can you make it into a JSON list based on the below outline (table column headers in parenthesis)?
 row (Row)
-col (Task)
-difficulty (Difficulty)
-task (Task Description)
-title (first line of Unlock Description)
-reward (the rest of the Unlock Description)
-reward should be a single string, not a list. You can separate lines with a newline character instead.
+col (Col)
+difficulty (set this to an empty string)
+task (Task)
+rewardName (Reward)
+reward (set this to an empty string)

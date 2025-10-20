@@ -29,10 +29,10 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (taskList.filter((t) => t.id === tile.id).length > 0) return;
     const newTask: Task = {
       id: tile.id,
-      task: tile.name,
+      task: tile.taskName,
       input: '',
       outputName: tile.rewardName,
-      outputValue: tile.reward,
+      outputValue: tile.rewardDescription,
       type: TaskType.Tile,
     }
     setTaskList(prev => [...prev, newTask]);
@@ -94,9 +94,9 @@ const createTileMap = () => {
 
     const t: GridTile = {
       id: uuidv5(entry.task, UUID_NAMESPACE),
-      name: entry.task,
-      rewardName: entry.title,
-      reward: entry.reward,
+      taskName: entry.task,
+      rewardName: entry.rewardName,
+      rewardDescription: entry.rewardDescription,
       row: row,
       col: col,
       difficulty: entry.difficulty as Difficulty,

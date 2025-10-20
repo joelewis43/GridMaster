@@ -13,8 +13,8 @@ function App() {
           <div className="grid-parent">
             <Grid />
             <hr/>
-            <div style={{ display: 'flex', gap: '20px' }}>
-              <textarea className='task-notes' />
+            <div>
+              <h5>Random Notes</h5>
               <textarea className='task-notes' />
             </div>
           </div>

@@ -19,11 +19,14 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose }) => {
   return (
     <Modal show={show} onHide={onClose} centered>
       <Modal.Header closeButton>
-        <Modal.Title>{tile.rewardName || ''}</Modal.Title>
+        <h3>{tile.taskName || ''}</h3>
       </Modal.Header>
+
       <Modal.Body>
-        <p style={{ whiteSpace: 'pre-line' }}>{tile.reward || 'No reward data available.'}</p>
+        <h4>{tile.rewardName}</h4>
+        <p>{tile.rewardDescription || 'No reward data available.'}</p>
       </Modal.Body>
+
       <Modal.Footer>
         <Button variant="secondary" onClick={onClose}>
           Close
@@ -32,6 +35,7 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose }) => {
           Add to List
         </Button>
       </Modal.Footer>
+      
     </Modal>
   );
 };

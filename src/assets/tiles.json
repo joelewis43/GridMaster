@@ -1,163 +1,394 @@
 [
   {
-    "row": 1,
-    "col": 4,
+    "row": "1",
+    "col": "1",
+    "difficulty": "Hard",
+    "task": "Defeat the Doom of Mokhaiotl at depth 8 or deeper",
+    "rewardName": "Avernic Treads (Max)",
+    "rewardDescription": ""
+  },
+  {
+    "row": "1",
+    "col": "2",
+    "difficulty": "Hard",
+    "task": "Defeat Sol Heredit",
+    "rewardName": "Specialist",
+    "rewardDescription": ""
+  },
+  {
+    "row": "1",
+    "col": "3",
+    "difficulty": "Medium",
+    "task": "Fully decorate a magic totem in the Auburn Valley",
+    "rewardName": "Devil's element",
+    "rewardDescription": ""
+  },
+  {
+    "row": "1",
+    "col": "4",
     "difficulty": "Easy",
-    "task": "Kill an Ogress.",
-    "title": "Combatant",
-    "reward": "Select three combat skills (from Attack, Strength, Defence, Hitpoints, Ranged, Magic, or Prayer).\nWhen you gain experience in one of your three selected skills you'll gain 50% of that experience in the other two skills."
+    "task": "Kill an Ogress",
+    "rewardName": "Combatant",
+    "rewardDescription": ""
   },
   {
-    "row": 1,
-    "col": 5,
+    "row": "1",
+    "col": "5",
     "difficulty": "Medium",
-    "task": "Defeat Jal‑Zek within the Inferno.",
-    "title": "Slayer Master",
-    "reward": "Always be on‑task for all Slayer monsters and unlock all slayer task perks for free.\nGain 1000‑15,000 bonus Slayer XP for the first time you kill the 100th of each unique slayer monster, scaled by the monster's slayer level requirement (XP stated is before multipliers)."
+    "task": "Defeat Jal-Zek within the Inferno",
+    "rewardName": "Slayer Master",
+    "rewardDescription": ""
   },
   {
-    "row": 2,
-    "col": 5,
+    "row": "1",
+    "col": "6",
+    "difficulty": "Hard",
+    "task": "Obtain a rare drop from Yama",
+    "rewardName": "Last Stand",
+    "rewardDescription": ""
+  },
+  {
+    "row": "1",
+    "col": "7",
+    "difficulty": "Hard",
+    "task": "Obtain a rare drop from Chambers of Xeric",
+    "rewardName": "Choose one of Twisted bow with 4k dragon arrows , Scythe of vitur with 20k charges, Tumeken's shadow with 20k charges",
+    "rewardDescription": ""
+  },
+  {
+    "row": "2",
+    "col": "1",
+    "difficulty": "Hard",
+    "task": "Reach 2,000 total level",
+    "rewardName": "All combat achievements completed",
+    "rewardDescription": ""
+  },
+  {
+    "row": "2",
+    "col": "2",
     "difficulty": "Medium",
-    "task": "Cook a shark while wearing a chef's hat.",
-    "title": "Corrupted Shark",
-    "reward": "A shark that isn't consumed when eaten. Heals a base of 20 hitpoints."
+    "task": "Subdue the Moons of Peril",
+    "rewardName": "Increase XP gain by 200% for all skills.",
+    "rewardDescription": ""
   },
   {
-    "row": 2,
-    "col": 7,
+    "row": "2",
+    "col": "3",
+    "difficulty": "Medium",
+    "task": "Obtain a rare drop from The Hueycoatl",
+    "rewardName": "Auto-complete While Guthix Sleeps",
+    "rewardDescription": ""
+  },
+  {
+    "row": "2",
+    "col": "4",
+    "difficulty": "Easy",
+    "task": "Reach a total skill level of 500.",
+    "rewardName": "An event lamp containing 25,000 XP to be used on any skill",
+    "rewardDescription": ""
+  },
+  {
+    "row": "2",
+    "col": "5",
+    "difficulty": "Medium",
+    "task": "Cook a shark while wearing a chef's hat",
+    "rewardName": "Corrupted Shark",
+    "rewardDescription": ""
+  },
+  {
+    "row": "2",
+    "col": "6",
+    "difficulty": "Medium",
+    "task": "Defeat Zulrah with a blowpipe",
+    "rewardName": "Auto-complete Monkey Madness II",
+    "rewardDescription": ""
+  },
+  {
+    "row": "2",
+    "col": "7",
     "difficulty": "Hard",
     "task": "Complete the Inferno in 30 minutes or less.",
-    "title": "Guardian Thrall",
-    "reward": "Summon a powerful thrall lasting for 30 minutes. The guardian will attack your target with whatever style it is weak to."
+    "rewardName": "Guardian Thrall",
+    "rewardDescription": ""
   },
   {
-    "row": 3,
-    "col": 1,
+    "row": "3",
+    "col": "1",
     "difficulty": "Medium",
-    "task": "Obtain some Valuables from a house in Varlamore.",
-    "title": "Golden God",
-    "reward": "High and Low Level Alchemy spells have no rune cost or level requirements.\nItems give 15% more gold and have a 65% chance to not be consumed when the spell is cast.\n20,000 coins can be offered at Prayer altars in exchange for Prayer XP equivalent to using a dragon bone."
+    "task": "Obtain some Valuables from a house in Varlamore",
+    "rewardName": "Golden God",
+    "rewardDescription": ""
   },
   {
-    "row": 4,
-    "col": 1,
+    "row": "3",
+    "col": "2",
+    "difficulty": "Medium",
+    "task": "Obtain a rare unique from the Barrows chest while wearing some Barrows equipment",
+    "rewardName": "Increase XP gain by 200% for all skills.",
+    "rewardDescription": ""
+  },
+  {
+    "row": "3",
+    "col": "3",
+    "difficulty": "Easy",
+    "task": "Drink a steamforge brew within the Stick Your Ore Inn",
+    "rewardName": "Bank Heist",
+    "rewardDescription": ""
+  },
+  {
+    "row": "3",
+    "col": "4",
+    "difficulty": "Easy",
+    "task": "Chop maple logs",
+    "rewardName": "Choose one of Power Miner , Lumberjack , Animal Wrangler",
+    "rewardDescription": ""
+  },
+  {
+    "row": "3",
+    "col": "5",
+    "difficulty": "Easy",
+    "task": "Defeat Scurrius",
+    "rewardName": "One tier increase in all combat masteries",
+    "rewardDescription": ""
+  },
+  {
+    "row": "3",
+    "col": "6",
+    "difficulty": "Medium",
+    "task": "Kill a lizardman shaman in the Lizardman Temple",
+    "rewardName": "Auto-complete Song of the Elves",
+    "rewardDescription": ""
+  },
+  {
+    "row": "3",
+    "col": "7",
+    "difficulty": "Medium",
+    "task": "Complete the corrupted gauntlet",
+    "rewardName": "Banker's Note",
+    "rewardDescription": ""
+  },
+  {
+    "row": "4",
+    "col": "1",
     "difficulty": "Easy",
     "task": "Gain over 30,000 coins from one Alchemy spell.",
-    "title": "Production Prodigy",
-    "reward": "When doing specific skilling activities, all items are processed at once, with a chance to make an extra product. Artisan skills also receive a permanent +12 boost."
+    "rewardName": "Production Prodigy",
+    "rewardDescription": ""
   },
   {
-    "row": 4,
-    "col": 4,
+    "row": "4",
+    "col": "2",
+    "difficulty": "Easy",
+    "task": "Steal from a fruit stall",
+    "rewardName": "Dodgy Deals",
+    "rewardDescription": ""
+  },
+  {
+    "row": "4",
+    "col": "3",
+    "difficulty": "Easy",
+    "task": "Throw a gnomeball",
+    "rewardName": "Corner Cutter",
+    "rewardDescription": ""
+  },
+  {
+    "row": "4",
+    "col": "4",
     "difficulty": "Beginner",
     "task": "Complete the Grid Master tutorial.",
-    "title": "Power Miner",
-    "reward": "This pickaxe will act as a non-degradable variant of the crystal equivalent with no requirements. When this item is in your inventory or equipped, you gain the following perks:\n- On failing to mine a rock, you will have a separate 50% chance to succeed.\n- Items gathered from Mining are automatically sent to your Bank.\n- The Echo Pickaxe will cause the rock to not deplete until you have mined 4 ore. This buff does stack with the existing Mining Gloves, with a cap of 7 ores from a given node.\n\nYou will be able to toggle the following effects on or off for the Pickaxe:\n- Collected ores are automatically smelted and grant Smithing XP (regardless of your smithing level)\n- Gems gathered from Mining are automatically cut and grant Crafting XP (regardless of your Crafting level)."
+    "rewardName": "Choose one of Power Miner , Lumberjack , Animal Wrangler",
+    "rewardDescription": ""
   },
   {
-    "row": 5,
-    "col": 3,
+    "row": "4",
+    "col": "5",
     "difficulty": "Easy",
-    "task": "Subdue Tempoross.",
-    "title": "Craftsman",
-    "reward": "Select three artisan skills (from Construction, Cooking, Crafting, Firemaking, Fletching, Herblore, Runecraft, and Smithing).\nWhen you gain experience in one of your three selected skills you'll gain 50% of that experience in the other two skills."
+    "task": "Equip any boots from the Stronghold of Security",
+    "rewardName": "Fairy's Flight",
+    "rewardDescription": ""
   },
   {
-    "row": 5,
-    "col": 5,
+    "row": "4",
+    "col": "6",
+    "difficulty": "Easy",
+    "task": "Complete the Vampyre Slayer quest",
+    "rewardName": "Auto-complete Sins of the Father",
+    "rewardDescription": ""
+  },
+  {
+    "row": "4",
+    "col": "7",
+    "difficulty": "Easy",
+    "task": "Clean 3 grimy herbs",
+    "rewardName": "Friendly Forager",
+    "rewardDescription": ""
+  },
+  {
+    "row": "5",
+    "col": "1",
+    "difficulty": "Medium",
+    "task": "Obtain a rare drop from Vorkath",
+    "rewardName": "Grimoire",
+    "rewardDescription": ""
+  },
+  {
+    "row": "5",
+    "col": "2",
+    "difficulty": "Medium",
+    "task": "Catch a moth bare-handed",
+    "rewardName": "Auto-complete Dragon Slayer II",
+    "rewardDescription": ""
+  },
+  {
+    "row": "5",
+    "col": "3",
+    "difficulty": "Easy",
+    "task": "Subdue Tempoross",
+    "rewardName": "Craftsman",
+    "rewardDescription": ""
+  },
+  {
+    "row": "5",
+    "col": "4",
+    "difficulty": "Easy",
+    "task": "Mine gold ore",
+    "rewardName": "Choose one of Power Miner , Lumberjack , Animal Wrangler",
+    "rewardDescription": ""
+  },
+  {
+    "row": "5",
+    "col": "5",
     "difficulty": "Easy",
     "task": "Witness the gemstone crab burrow away.",
-    "title": "Gatherer",
-    "reward": "Select three gathering or support skills (from Mining, Fishing, Woodcutting, Hunter, Agility, Slayer, and Thieving).\nWhen you gain experience in one of your three selected skills you'll gain 50% of that experience in the other two skills."
+    "rewardName": "Gatherer",
+    "rewardDescription": ""
   },
   {
-    "row": 6,
-    "col": 1,
+    "row": "5",
+    "col": "6",
+    "difficulty": "Medium",
+    "task": "Make a Zamorak brew while wearing Zamorak monk robes in the Varrock chaos altar",
+    "rewardName": "Bottomless Brew",
+    "rewardDescription": ""
+  },
+  {
+    "row": "5",
+    "col": "7",
+    "difficulty": "Medium",
+    "task": "Defeat TzTok-Jad",
+    "rewardName": "Auto-complete The Final Dawn",
+    "rewardDescription": ""
+  },
+  {
+    "row": "6",
+    "col": "1",
     "difficulty": "Hard",
     "task": "Defeat all 4 Awakened bosses.",
-    "title": "Battlehat",
-    "reward": "A tribrid helmet with no negative bonuses, that also functions as a slayer helm"
+    "rewardName": "Battlehat",
+    "rewardDescription": ""
   },
   {
-    "row": 7,
-    "col": 1,
+    "row": "6",
+    "col": "2",
+    "difficulty": "Medium",
+    "task": "Defeat Kalphite Queen",
+    "rewardName": "Drygore blowpipe",
+    "rewardDescription": ""
+  },
+  {
+    "row": "6",
+    "col": "3",
+    "difficulty": "Medium",
+    "task": "Equip a unique item from God Wars Dungeon",
+    "rewardName": "Total Recall",
+    "rewardDescription": ""
+  },
+  {
+    "row": "6",
+    "col": "4",
+    "difficulty": "Easy",
+    "task": "Open Bryophyta's chest",
+    "rewardName": "One tier increase in all combat masteries",
+    "rewardDescription": ""
+  },
+  {
+    "row": "6",
+    "col": "5",
+    "difficulty": "Medium",
+    "task": "Check a grown fruit tree",
+    "rewardName": "Farmer's Fortune",
+    "rewardDescription": ""
+  },
+  {
+    "row": "6",
+    "col": "6",
+    "difficulty": "Medium",
+    "task": "Equip an Amulet of Fury",
+    "rewardName": "Auto-complete Desert Treasure II",
+    "rewardDescription": ""
+  },
+  {
+    "row": "6",
+    "col": "7",
     "difficulty": "Hard",
-    "task": "Obtain a rare unique from Tombs of Amascut.",
-    "title": "Raids megarare voucher",
-    "reward": "redeemable for one of the following:\nTwisted bow\nScythe of Vitur\nTumeken’s shadow"
+    "task": "Complete floor 5 of the Hallowed Sepulchre",
+    "rewardName": "Auto-complete all achievement diaries",
+    "rewardDescription": ""
   },
   {
-    "row": 7,
-    "col": 2,
+    "row": "7",
+    "col": "1",
     "difficulty": "Hard",
-    "task": "Build a demonic throne in your player‑owned house.",
-    "title": "Thunder khopesh",
-    "reward": "One‑handed slash/stab melee weapon that deals full damage to the Corporeal Beast.\nHas a 20% chance to trigger an AoE lightning bolt under the target, hitting anything in a 1 tile radius, which rolls with 50% of the original attack's max hit.\nSpecial attack (Costs 50%): Attacks twice. If either attack is successful an additional lightning bolt is summoned rolling up to 100% of the original attack's max hit."
+    "task": "Obtain a rare unique from Tombs of Amascut",
+    "rewardName": "Choose one of Twisted bow with 4k dragon arrows , Scythe of vitur with 20k charges, Tumeken's shadow with 20k charges",
+    "rewardDescription": ""
   },
   {
-    "row": 7,
-    "col": 4,
-    "difficulty": "Easy",
-    "task": "Defeat the lesser demon in the Wizards’ Tower.",
-    "title": "Minimum Potential",
-    "reward": "Successful hits will never deal below 5 damage. It is still possible to miss attacks."
+    "row": "7",
+    "col": "2",
+    "difficulty": "Hard",
+    "task": "Build a demonic throne in your player-owned house",
+    "rewardName": "Thunder khopesh",
+    "rewardDescription": ""
   },
   {
-    "row": 2,
-    "col": 4,
-    "difficulty": "Easy",
-    "task": "Reach 500 total level.",
-    "title": "XP Lamp",
-    "reward": "An experience lamp containing 25,000 XP to be used on any skill."
+    "row": "7",
+    "col": "3",
+    "difficulty": "Medium",
+    "task": "Deposit a skillcape into your player-owned house",
+    "rewardName": "Spiky Aura",
+    "rewardDescription": ""
   },
   {
-    "row": 3,
-    "col": 4,
+    "row": "7",
+    "col": "4",
     "difficulty": "Easy",
-    "task": "Chop Maple Logs.",
-    "title": "Tier 1 Relic Choice",
-    "reward": "Wrangler"
+    "task": "Defeat the lesser demon in the Wizards' Tower",
+    "rewardName": "Minimum Potential",
+    "rewardDescription": ""
   },
   {
-    "row": 5,
-    "col": 4,
-    "difficulty": "Easy",
-    "task": "Mine Gold Ore",
-    "title": "Tier 1 Relic Choice",
-    "reward": "Jacker"
+    "row": "7",
+    "col": "5",
+    "difficulty": "Medium",
+    "task": "Reach 1,500 total level",
+    "rewardName": "100,000 XP event lamp",
+    "rewardDescription": ""
   },
   {
-    "row": 6,
-    "col": 4,
-    "difficulty": "Easy",
-    "task": "Open Bryophyta's Chest.",
-    "title": "Combat Mastery",
-    "reward": "All Combat Masteries increase by 1 tier.\n- Melee I: Melee hits have a 25% chance to roll damage twice and take the highest result.\n- Ranged I: Damage rolls beneath 30% of max hit with Ranged are increased to 30%.\n- Magic I: When you roll above 90% of your max hit with Magic, damage is increased by 50%.\n- Passive: 95% chance to save weapon charges, ammunition, and runes used for spells."
+    "row": "7",
+    "col": "6",
+    "difficulty": "Hard",
+    "task": "Obtain a rare drop from Araxxor",
+    "rewardName": "Increase XP gain by 200% for all skills.",
+    "rewardDescription": ""
   },
   {
-    "row": 4,
-    "col": 5,
-    "difficulty": "Easy",
-    "task": "** Complete the Stronghold of Security",
-    "title": "Tuna Potato Ring?",
-    "reward": "Speculative"
-  },
-  {
-    "row": 4,
-    "col": 7,
-    "difficulty": "Easy",
-    "task": "** Catch a Golden Warbler",
-    "title": "Friendly Forager",
-    "reward": "Speculative"
-  },
-  {
-    "row": 3,
-    "col": 3,
-    "difficulty": "Easy",
-    "task": "** Drink a Steamforge Brew",
-    "title": "Weird broodoo shield thing",
-    "reward": "Speculative"
+    "row": "7",
+    "col": "7",
+    "difficulty": "Hard",
+    "task": "Obtain a rare drop from Theatre of Blood",
+    "rewardName": "Choose one of Twisted bow with 4k dragon arrows , Scythe of vitur with 20k charges, Tumeken's shadow with 20k charges",
+    "rewardDescription": ""
   }
-
 ]

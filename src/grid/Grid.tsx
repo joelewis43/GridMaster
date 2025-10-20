@@ -23,7 +23,7 @@ const Grid: React.FC<GridProps> = ({ }) => {
 
   const buildRowContents = (gridSize: number, row: number, tileMap: TileMap, handleTileClick: (tile: GridTile) => void) => {
     return (
-      <Row key={row} className="g-2 grid-row">
+      <Row key={row} className="row no-side-margins">
         {Array.from({ length: gridSize }, (_, colIndex) => {
           const col = colIndex + 1;
           const tile = tileMap[row]?.[col];
@@ -35,7 +35,7 @@ const Grid: React.FC<GridProps> = ({ }) => {
   }
 
   return (
-    <Container fluid>
+    <Container className='container-fluid'>
       {Array.from({ length: gridSize }, (_, rowIndex) => {
         const row = rowIndex + 1;
         return buildRowContents(gridSize, row, grid, handleTileClick);

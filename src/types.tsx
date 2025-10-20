@@ -11,9 +11,9 @@ export interface Task {
 
 export interface GridTile {
   id: string,
-  name: string,
+  taskName: string,
   rewardName: string,
-  reward: string,
+  rewardDescription: string,
   row: number,
   col: number,
   difficulty: Difficulty,
