@@ -8,7 +8,8 @@ import '../style/App.css'
 import '../style/Grid.css';
 import '../style/Border.css';
 import '../style/Route.css';
-import '../style/Buff.css'
+import '../style/Buff.css';
+import '../style/Icon.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

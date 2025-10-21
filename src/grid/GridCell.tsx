@@ -7,9 +7,10 @@ import Icon from '../icon/Icon';
 interface GridCellProps {
   tile: GridTile;
   onClick: (tile: GridTile) => void;
+  reward: boolean;
 }
 
-const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
+const GridCell: React.FC<GridCellProps> = ({ tile, onClick, reward }) => {
   const { addTileToRoute } = useRouteContext();
   const clickTimeout = useRef<number | null>(null);
 
@@ -48,9 +49,11 @@ const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
     addTileToRoute(tile);
   };
 
+  const tileDescription = reward ? tile.reward.name : tile.task.name;
+
   return (
     <Col className={getClasses()} onClick={handleClick} onDoubleClick={handleDoubleClick}>
-      <Icon row={tile.row} col={tile.col} opaque={tile.planned} description={tile.task.name}/>
+      <Icon row={tile.row} col={tile.col} opaque={tile.planned} description={tileDescription} reward={reward}/>
     </Col>
   );
 };
