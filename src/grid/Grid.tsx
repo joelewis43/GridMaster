@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import type { GridTile, TileMap } from '../types'
 import TileModal from './TileModal';
-import { useTaskContext } from '../TaskProvider';
+import { useGridContext } from '../providers/GridProvider';
 import GridCell from './GridCell';
 
 interface GridProps {
@@ -14,7 +14,7 @@ const Grid: React.FC<GridProps> = ({ }) => {
   const [selectedTile, setSelectedTile] = useState<GridTile | null>(null);
   const [showModal, setShowModal] = useState(false);
 
-  const { grid } = useTaskContext();
+  const { grid } = useGridContext();
 
   const handleTileClick = (tile: GridTile) => {
     setSelectedTile(tile);

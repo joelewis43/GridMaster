@@ -1,23 +1,24 @@
 export const UUID_NAMESPACE: string = '889207a4-4d6b-4edb-a48e-6249bc74b0bb';
 
-export interface Task {
+export interface Step {
   id: string,
   task: string,
   input: string,
   outputName: string,
   outputValue: string,
-  type: TaskType,
+  type: StepType,
 }
 
 export interface GridTile {
   id: string,
-  taskName: string,
-  rewardName: string,
-  rewardDescription: string,
   row: number,
   col: number,
-  difficulty: Difficulty,
+
+  reward: Reward,
+  task: Task,
+
   planned: boolean,
+  done: boolean,
 }
 
 export enum Difficulty {
@@ -28,12 +29,32 @@ export enum Difficulty {
   None = 'None'
 }
 
-export enum TaskType {
+export enum StepType {
   Tile = 'Tile',
   Travel = 'Travel',
   Action = 'Action',
   None = 'None',
 }
+
+export enum RewardType {
+  Item = 'Item',
+  Relic = 'Relic',
+  Multiplier = 'Multiplier',
+
+}
+
+export type Reward = {
+  name: string,
+  description: string,
+  type: RewardType,
+}
+
+export interface Task {
+  name: string,
+  difficulty: Difficulty,
+}
+
+
 
 export type TileMap = {
   [row: number]: {

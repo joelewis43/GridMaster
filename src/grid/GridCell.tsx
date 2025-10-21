@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Col } from 'react-bootstrap';
 import type { GridTile } from '../types';
-import { useTaskContext } from '../TaskProvider';
+import { useRouteContext } from '../providers/RouteProvider';
 import Icon from '../icon/Icon';
 
 interface GridCellProps {
@@ -10,14 +10,14 @@ interface GridCellProps {
 }
 
 const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
-  const { addTileToList } = useTaskContext();
+  const { addTileToRoute } = useRouteContext();
   const clickTimeout = useRef<number | null>(null);
 
   const getClasses = () => {
     return (
       `tile-cell
         ${tile ? 'tile-filled' : 'tile-empty'}
-        ${tile ? `border-${tile.difficulty.toLowerCase()}` : ''}
+        ${tile ? `border-${tile.task.difficulty.toLowerCase()}` : ''}
         ${tile != undefined ? (tile.planned ? 'task-planned' : '') : ''}`
     );
   };
@@ -45,12 +45,12 @@ const GridCell: React.FC<GridCellProps> = ({ tile, onClick }) => {
       clearTimeout(clickTimeout.current);
       clickTimeout.current = null;
     }
-    addTileToList(tile);
+    addTileToRoute(tile);
   };
 
   return (
     <Col className={getClasses()} onClick={handleClick} onDoubleClick={handleDoubleClick}>
-      <Icon row={tile.row} col={tile.col} opaque={tile.planned} description={tile.taskName}/>
+      <Icon row={tile.row} col={tile.col} opaque={tile.planned} description={tile.task.name}/>
     </Col>
   );
 };

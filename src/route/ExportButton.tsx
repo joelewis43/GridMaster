@@ -1,14 +1,14 @@
 import React from 'react';
-import type { Task } from '../types';
+import type { Step } from '../types';
 import { Button } from 'react-bootstrap';
 
 interface ExportButtonProps {
-  tasks: Task[];
+  route: Step[];
 }
 
-const ExportButton: React.FC<ExportButtonProps> = ({ tasks }) => {
+const ExportButton: React.FC<ExportButtonProps> = ({ route }) => {
   const handleExport = () => {
-    const json = JSON.stringify(tasks, null, 2); // pretty print with 2-space indent
+    const json = JSON.stringify(route, null, 2); // pretty print with 2-space indent
     const blob = new Blob([json], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
 

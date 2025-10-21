@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import type { Task } from '../types';
+import type { Step } from '../types';
 
 interface ImportButtonProps {
-  onImport: (tasks: Task[]) => void;
+  onImport: (route: Step[]) => void;
 }
 
 const ImportButton: React.FC<ImportButtonProps> = ({ onImport }) => {

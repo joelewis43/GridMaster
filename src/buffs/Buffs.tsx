@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTaskContext } from '../TaskProvider';
+import { useGridContext } from '../providers/GridProvider';
 import type { GridTile } from '../types';
 import Icon from '../icon/Icon';
 
@@ -9,7 +9,7 @@ interface BuffsProps {
 
 const Buffs: React.FC<BuffsProps> = ({ }) => {
 
-const { grid } = useTaskContext();
+const { grid } = useGridContext();
 
   // Flatten the TileMap into a single array of tiles
   const allTiles: GridTile[] = Object.values(grid)
@@ -22,7 +22,7 @@ const { grid } = useTaskContext();
     <div>
       <h3>Active Buffs</h3>
         {plannedTiles.map(tile => (
-            <Icon row={tile.row} col={tile.col} description={tile.rewardName} opaque={false} reward={true}/>
+            <Icon row={tile.row} col={tile.col} description={tile.reward.description} opaque={false} reward={true}/>
         ))}
     </div>
   );

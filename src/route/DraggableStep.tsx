@@ -1,19 +1,19 @@
 import React, { useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
-import type { Task } from '../types';
 import { BsTrash } from 'react-icons/bs'
 import { FaEdit } from "react-icons/fa";
+import type { Step } from '../types';
 
-interface DraggableTaskProps {
-  task: Task;
+interface DraggableStepProps {
+  step: Step;
   index: number;
-  moveTask: (from: number, to: number) => void;
+  moveStep: (from: number, to: number) => void;
   type: string;
-  deleteTask: (id: string) => void;
-  editTask: (task: Task) => void;
+  deleteStep: (id: string) => void;
+  editStep: (step: Step) => void;
 }
 
-const DraggableTask: React.FC<DraggableTaskProps> = ({ task, index, moveTask, type, deleteTask, editTask }) => {
+const DraggableStep: React.FC<DraggableStepProps> = ({ step, index, moveStep, type, deleteStep, editStep }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const [, drop] = useDrop({
@@ -34,7 +34,7 @@ const DraggableTask: React.FC<DraggableTaskProps> = ({ task, index, moveTask, ty
       if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) return;
       if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) return;
 
-      moveTask(dragIndex, hoverIndex);
+      moveStep(dragIndex, hoverIndex);
       item.index = hoverIndex;
     },
   });
@@ -52,25 +52,25 @@ const DraggableTask: React.FC<DraggableTaskProps> = ({ task, index, moveTask, ty
   if (isDragging && 0) return;
 
   return (
-    <div ref={ref} className={`drag-task ${task.type + '-class'}`}>
+    <div ref={ref} className={`drag-task ${step.type + '-class'}`}>
 
       <div className='task-body'>
-        <p>{task.task}</p>
+        <p>{step.task}</p>
       </div>
 
       <div className='input-body'>
-        <p>{task.input}</p>
+        <p>{step.input}</p>
       </div>
 
       <div className='reward-body'>
-        <p>{task.outputName}</p>
+        <p>{step.outputName}</p>
       </div>
 
       <div className='button-container'>
-        <button onClick={() => editTask(task)} className='update-task'>
+        <button onClick={() => editStep(step)} className='update-task'>
           <FaEdit />
         </button>
-        <button onClick={() => deleteTask(task.id)} className='delete-task'>
+        <button onClick={() => deleteStep(step.id)} className='delete-task'>
           <BsTrash />
         </button>
       </div>
@@ -78,4 +78,4 @@ const DraggableTask: React.FC<DraggableTaskProps> = ({ task, index, moveTask, ty
   );
 };
 
-export default DraggableTask;
+export default DraggableStep;

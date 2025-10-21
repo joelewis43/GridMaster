@@ -1,32 +1,32 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import ExportButton from './ExportButton';
-import type { Task } from '../types';
+import type { Step } from '../types';
 import ImportButton from './ImportButton';
 import { FaQuestionCircle } from "react-icons/fa";
 import HelpModal from './HelpModal';
-import { useTaskContext } from '../TaskProvider';
+import { useRouteContext } from '../providers/RouteProvider';
 
 interface ControlBarProps {
-  openAddTask: Function,
-  tasksForExport: Task[],
+  openAddStep: Function,
+  routeForExport: Step[],
 }
 
-const ControlBar: React.FC<ControlBarProps> = ({ openAddTask, tasksForExport }) => {
+const ControlBar: React.FC<ControlBarProps> = ({ openAddStep, routeForExport }) => {
   const [showHelpModal, setShowHelpModal] = useState(false);
 
   const flipHelpModal = () => {setShowHelpModal(!showHelpModal)}
 
-  const { importTask } = useTaskContext();
+  const { importRoute } = useRouteContext();
   
 
   return (
     <div className='task-controls'>
-      <Button variant="secondary" onClick={() => openAddTask()}>
-        Add Task
+      <Button variant="secondary" onClick={() => openAddStep()}>
+        Add Step
       </Button>
-      <ImportButton onImport={importTask} />
-      <ExportButton tasks={tasksForExport} />
+      <ImportButton onImport={importRoute} />
+      <ExportButton route={routeForExport} />
       <Button className='ms-auto' variant='secondary' onClick={() => flipHelpModal()}>
         <FaQuestionCircle/>
       </Button>

@@ -1,39 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { type Task, Difficulty, TaskType } from '../types';
+import { type Step, Difficulty, StepType } from '../types';
 import { v4 as uuidv4 } from 'uuid';
 
-interface TaskModalProps {
+interface StepModalProps {
   show: boolean;
   onClose: () => void;
-  onSubmit: (task: Task) => void;
-  initialTask?: Task; // Used for edit operations
+  onSubmit: (step: Step) => void;
+  initialStep?: Step; // Used for edit operations
 }
 
-const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialTask }) => {
-  const [form, setForm] = useState<Task>(() =>
-    initialTask ?? {
+const StepModal: React.FC<StepModalProps> = ({ show, onClose, onSubmit, initialStep }) => {
+  const [form, setForm] = useState<Step>(() =>
+    initialStep ?? {
       id: uuidv4(),
       task: '',
       input: '',
       outputName: '',
       outputValue: '',
-      type: TaskType.None,
+      type: StepType.None,
     });
 
   useEffect(() => {
     if (show) {
       setForm(
-        initialTask ?? {
+        initialStep ?? {
           id: uuidv4(),
           task: '',
           input: '',
           outputName: '',
           outputValue: '',
-          type: TaskType.None,
+          type: StepType.None,
         });
     }
-  }, [show, initialTask]);
+  }, [show, initialStep]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -49,7 +49,7 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
     onClose();
   };
 
-  const isEditing = !!initialTask;
+  const isEditing = !!initialStep;
 
   return (
     <Modal show={show} onHide={onClose}>
@@ -60,7 +60,7 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
 
         <Modal.Body>
           <Form.Group className="mb-3">
-            <Form.Label>Task</Form.Label>
+            <Form.Label>Step</Form.Label>
             <Form.Control
               type="text"
               name="task"
@@ -88,9 +88,9 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
             />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Task Type</Form.Label>
+            <Form.Label>Step Type</Form.Label>
             <Form.Select name="type" value={form.type} onChange={handleChange}>
-              {Object.entries(TaskType).map(([key, value]) => (
+              {Object.entries(StepType).map(([key, value]) => (
                 <option key={key} value={value}>
                   {value}
                 </option>
@@ -112,4 +112,4 @@ const TaskModal: React.FC<TaskModalProps> = ({ show, onClose, onSubmit, initialT
   );
 };
 
-export default TaskModal;
+export default StepModal;
