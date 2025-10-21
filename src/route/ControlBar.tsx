@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import ExportButton from './ExportButton';
 import type { Step } from '../types';
 import ImportButton from './ImportButton';
-import { FaQuestionCircle } from "react-icons/fa";
+import { FaQuestionCircle, FaPlusCircle } from "react-icons/fa";
 import HelpModal from './HelpModal';
 import { useRouteContext } from '../providers/RouteProvider';
 
@@ -23,7 +23,7 @@ const ControlBar: React.FC<ControlBarProps> = ({ openAddStep, routeForExport }) 
   return (
     <div className='task-controls'>
       <Button variant="secondary" onClick={() => openAddStep()}>
-        Add Step
+        <FaPlusCircle/>
       </Button>
       <ImportButton onImport={importRoute} />
       <ExportButton route={routeForExport} />

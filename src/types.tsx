@@ -40,7 +40,9 @@ export enum RewardType {
   Item = 'Item',
   Relic = 'Relic',
   Multiplier = 'Multiplier',
-
+  AutoComplete = 'AutoComplete',
+  Experience = 'Experience',
+  CombatMastery = 'CombatMastery',
 }
 
 export type Reward = {

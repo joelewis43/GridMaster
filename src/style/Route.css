@@ -32,6 +32,10 @@
   /* height: 30px; */
 }
 
+.route-container {
+  margin: 10px;
+}
+
 .input-body {
   width: 30%;
   text-align: left;

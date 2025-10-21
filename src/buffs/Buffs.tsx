@@ -1,30 +1,41 @@
 import React from 'react';
 import { useGridContext } from '../providers/GridProvider';
-import type { GridTile } from '../types';
-import Icon from '../icon/Icon';
+import { RewardType, type GridTile } from '../types';
+import BuffSection from './BuffSection';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
-interface BuffsProps {
+interface BuffsProps { }
 
-}
+const Buffs: React.FC<BuffsProps> = () => {
+  const { grid } = useGridContext();
 
-const Buffs: React.FC<BuffsProps> = ({ }) => {
-
-const { grid } = useGridContext();
-
-  // Flatten the TileMap into a single array of tiles
-  const allTiles: GridTile[] = Object.values(grid)
-    .flatMap(row => Object.values(row));
-
-  // Filter tiles by a property, e.g., planned === true
+  // Flatten and filter planned tiles
+  const allTiles: GridTile[] = Object.values(grid).flatMap(row =>
+    Object.values(row)
+  );
   const plannedTiles = allTiles.filter(tile => tile.planned);
 
+  // Group tiles by reward type
+  const groupedTiles = Object.values(RewardType).reduce(
+    (acc, type) => {
+      acc[type] = plannedTiles.filter(tile => tile.reward.type === type);
+      return acc;
+    },
+    {} as Record<RewardType, GridTile[]>
+  );
+
   return (
-    <div>
-      <h3>Active Buffs</h3>
-        {plannedTiles.map(tile => (
-            <Icon row={tile.row} col={tile.col} description={tile.reward.description} opaque={false} reward={true}/>
+    <div className='buff-tabs'>
+      <Tabs defaultActiveKey={RewardType.Relic} id="buffs-tabs" className="mb-3" fill>
+        {Object.values(RewardType).map(type => (
+          <Tab key={type} eventKey={type} title={type}>
+            <BuffSection buffs={groupedTiles[type]} />
+          </Tab>
         ))}
+      </Tabs>
     </div>
+
   );
 };
 

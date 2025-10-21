@@ -36,7 +36,7 @@ const Route: React.FC<RouteProps> = ({ }) => {
   }
 
   return (
-    <div>
+    <div className='route-container'>
       <ControlBar openAddStep={flipAddStep} routeForExport={route} />
       <div className='task-list-header'>
         <h4 className='task-body'>Step</h4>

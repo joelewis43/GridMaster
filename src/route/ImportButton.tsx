@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import type { Step } from '../types';
+import { FaUpload } from "react-icons/fa";
 
 interface ImportButtonProps {
   onImport: (route: Step[]) => void;
@@ -49,7 +50,7 @@ const ImportButton: React.FC<ImportButtonProps> = ({ onImport }) => {
         style={{ display: 'none' }}
       />
       <Button variant="secondary" onClick={handleClick}>
-        Import Tasks
+        <FaUpload/>
       </Button>
     </>
   );

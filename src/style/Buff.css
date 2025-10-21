@@ -1,0 +1,15 @@
+.buff-icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+
+.buff-tabs {
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  background-color: rgb(128, 123, 123);
+  border-radius: 20px;
+}

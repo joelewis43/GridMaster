@@ -53,7 +53,7 @@ const createTileMap = () => {
     const r: Reward = {
       name: entry.rewardName,
       description: entry.rewardDescription,
-      type: RewardType.Relic // TODO: Update the JSON
+      type: entry.rewardType as RewardType,
     }
 
     const t: Task = {

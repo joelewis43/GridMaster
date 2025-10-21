@@ -4,7 +4,7 @@
   margin: 0 auto;
   background-color:cadetblue;
   box-shadow: 0 18px 18px rgba(0, 0, 0, 1);
-  padding: 10px;
+  padding-top: 10px;
 }
 
 .app-container {
@@ -15,9 +15,14 @@
 }
 
 .grid-parent {
-  /* width: 600px; */
+  width: 462px;
 }
 
 .list-parent {
   flex: 1;
+}
+
+hr {
+  margin-left: 10px;
+  margin-right: 10px;
 }

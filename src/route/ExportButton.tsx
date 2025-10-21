@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Step } from '../types';
 import { Button } from 'react-bootstrap';
+import { FaDownload } from "react-icons/fa";
 
 interface ExportButtonProps {
   route: Step[];
@@ -22,7 +23,7 @@ const ExportButton: React.FC<ExportButtonProps> = ({ route }) => {
 
   return (
     <Button variant="secondary" onClick={handleExport}>
-      Export Tasks
+      <FaDownload/>
     </Button>
   );
 };

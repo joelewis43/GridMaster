@@ -15,10 +15,8 @@ function App() {
 
             <div className="grid-parent">
               <Grid />
-              <hr />
-              <div>
-                <Buffs />
-              </div>
+              <hr/>
+              <Buffs />
             </div>
 
             <div className="list-parent">
