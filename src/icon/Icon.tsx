@@ -6,17 +6,18 @@ interface IconProps {
   col: number;
   opaque: boolean;
   description: string;
+  reward?: boolean;
 }
 
-const Icon: React.FC<IconProps> = ({ row, col, opaque, description }) => {
+const Icon: React.FC<IconProps> = ({ row, col, opaque, description, reward }) => {
 
-  const tileImage = `tasks/50px-Grid_Master_tile_(R${row}T${col}).png`
+  const tileImage = reward ? `rewards/60px-Grid_Master_tile_(R${row}T${col})_reward.png` : `tasks/50px-Grid_Master_tile_(R${row}T${col}).png`
   const tileImageClass = `${opaque ? 'tile-opaque' : ''}`
 
   return (
     <OverlayTrigger
       placement="right"
-      overlay={<Tooltip id={`tooltip-${row}-${col}`}>{description}</Tooltip>}
+      overlay={<Tooltip id={`tooltip-${row}-${col}-${reward}`}>{description}</Tooltip>}
     >
       <img src={tileImage} className={tileImageClass} alt={description} style={{ cursor: 'pointer' }} />
     </OverlayTrigger>

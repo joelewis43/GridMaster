@@ -17,8 +17,9 @@ interface TaskContextType {
 const TaskContext = createContext<TaskContextType | undefined>(undefined);
 
 export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+
+  /* ******************* Task List Provider Methods ******************* */
   const [taskList, setTaskList] = useState<Task[]>([]);
-  const [grid, setGrid] = useState<TileMap>(createTileMap());
 
   const addTask = (newTask: Task) => {
     if (taskList.filter((t) => t.id === newTask.id).length > 0) return;
@@ -57,6 +58,9 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }
 
+  /* ******************* Grid Provider Methods ******************* */
+  const [grid, setGrid] = useState<TileMap>(createTileMap());
+
   const setGridPlanned = (id: string, b: boolean) => {
     setGrid((prevGrid) => {
       for (const row of Object.values(prevGrid)) {
@@ -71,6 +75,8 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
     });
   }
 
+
+ /* ******************* Context Provider ******************* */
   return (
     <TaskContext.Provider value={{ taskList, grid, setTaskList, addTask, addTileToList, editTask, deleteTask, importTask }}>
       {children}

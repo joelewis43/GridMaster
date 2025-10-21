@@ -3,6 +3,7 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import TaskList from '../list/TaskList';
 import { TaskProvider } from '../TaskProvider';
+import Buffs from '../buffs/Buffs';
 
 function App() {
   return (
@@ -13,8 +14,7 @@ function App() {
             <Grid />
             <hr/>
             <div>
-              <h5>Random Notes</h5>
-              <textarea className='task-notes' />
+              <Buffs />
             </div>
           </div>
           <div className="list-parent">
