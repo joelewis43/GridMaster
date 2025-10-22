@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import ExportButton from '../buttons/ExportButton';
 import ImportButton from '../buttons/ImportButton';
 import { FaQuestionCircle, FaPlusCircle } from "react-icons/fa";
-import HelpModal from '../route/HelpModal';
+import HelpModal from '../modals/HelpModal';
 import { useRouteContext } from '../providers/RouteProvider';
-import StepModal from '../route/StepModal';
+import StepModal from '../modals/StepModal';
 
 interface NavBarProps {
 }

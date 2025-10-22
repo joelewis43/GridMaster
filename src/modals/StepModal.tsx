@@ -52,13 +52,10 @@ const StepModal: React.FC<StepModalProps> = ({ show, onClose, onSubmit, initialS
   const isEditing = !!initialStep;
 
   return (
-    <Modal show={show} onHide={onClose}>
+    <Modal show={show} onHide={onClose} centered>
       <Form onSubmit={handleSubmit}>
-        <Modal.Header closeButton>
-          <Modal.Title>{isEditing ? 'Edit Task' : 'Add Task'}</Modal.Title>
-        </Modal.Header>
-
         <Modal.Body>
+          <Modal.Title>{isEditing ? 'Edit Task' : 'Add Task'}</Modal.Title>
           <Form.Group className="mb-3">
             <Form.Label>Step</Form.Label>
             <Form.Control
@@ -97,16 +94,16 @@ const StepModal: React.FC<StepModalProps> = ({ show, onClose, onSubmit, initialS
               ))}
             </Form.Select>
           </Form.Group>
-        </Modal.Body>
 
-        <Modal.Footer>
-          <Button variant="secondary" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button type="submit" variant="primary">
-            {isEditing ? 'Update' : 'Submit'}
-          </Button>
-        </Modal.Footer>
+          <div className='modal-buttons'>
+            <Button className='modal-button' onClick={onClose}>
+              Cancel
+            </Button>
+            <Button className='modal-button' type="submit">
+              {isEditing ? 'Update' : 'Submit'}
+            </Button>
+          </div>
+        </Modal.Body>
       </Form>
     </Modal>
   );

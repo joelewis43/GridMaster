@@ -11,6 +11,7 @@ import '../style/Route.css';
 import '../style/Buff.css';
 import '../style/Icon.css';
 import '../style/Nav.css'
+import '../style/Modal.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

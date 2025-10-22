@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import update from 'immutability-helper';
 import type { Step } from '../types';
 import DraggableStep from './DraggableStep';
-import StepModal from './StepModal';
+import StepModal from '../modals/StepModal';
 import { useRouteContext } from '../providers/RouteProvider';
 
 const ItemType = 'TILE';
@@ -39,8 +39,7 @@ const Route: React.FC<RouteProps> = ({ }) => {
         <h4 className='route-col'>Step</h4>
         <h4 className='route-col'>Input</h4>
         <h4 className='route-col'>Output</h4>
-      </div>
-      <hr />
+      </div>  
       <div className='step-container'>
         {route.map((step, index) => (
           <DraggableStep

@@ -1,0 +1,25 @@
+.modal-content {
+  background-color: #93A8AC;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+}
+
+.modal-button {
+  background-color: #4C5760;
+  border: 0;
+}
+
+.modal-button:hover {
+  background-color: #4c5760c7;
+  border: 0;
+}
+
+.form-control, .form-control:active, .form-control:focus,
+.form-select, .form-select:active, .form-select:focus {
+  background-color: #D7CEB2;
+  border: 0;
+}

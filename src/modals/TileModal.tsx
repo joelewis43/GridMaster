@@ -18,24 +18,21 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose }) => {
 
   return (
     <Modal show={show} onHide={onClose} centered>
-      <Modal.Header closeButton>
-        <h3>{tile.task.name || ''}</h3>
-      </Modal.Header>
-
-      <Modal.Body>
-        <h4>{tile.reward.name}</h4>
-        <p>{tile.reward.description || 'No reward description is available.'}</p>
+      <Modal.Body className='grid-modal'>
+        <h5>Task: {tile.task.name}</h5>
+        <h5>Reward: {tile.reward.name}</h5>
+        <p>Description: {tile.reward.description || 'No reward description is available.'}</p>
+        <div className='modal-buttons'>
+          <Button className='modal-button' onClick={onClose}>
+            Close
+          </Button>
+          <Button className='modal-button' onClick={() => addTileToRoute(tile)}>
+            Add to List
+          </Button>
+        </div>
       </Modal.Body>
 
-      <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
-          Close
-        </Button>
-        <Button variant='secondary' onClick={() => addTileToRoute(tile)}>
-          Add to List
-        </Button>
-      </Modal.Footer>
-      
+
     </Modal>
   );
 };

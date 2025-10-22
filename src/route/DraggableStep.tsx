@@ -68,12 +68,8 @@ const DraggableStep: React.FC<DraggableStepProps> = ({ step, index, moveStep, ty
       </div>
 
       <div className='button-container'>
-        <button onClick={() => editStep(step)} className='update-task'>
-          <FaEdit />
-        </button>
-        <button onClick={() => deleteStepFromRoute(step.id)} className='delete-task'>
-          <BsTrash />
-        </button>
+        <FaEdit className='step-button' onClick={() => editStep(step)}/>
+        <BsTrash className='step-button' onClick={() => deleteStepFromRoute(step.id)}/>
       </div>
     </div>
   );
