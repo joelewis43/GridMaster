@@ -3,18 +3,19 @@ import { useDrag, useDrop } from 'react-dnd';
 import { BsTrash } from 'react-icons/bs'
 import { FaEdit } from "react-icons/fa";
 import type { Step } from '../types';
+import { useRouteContext } from '../providers/RouteProvider';
 
 interface DraggableStepProps {
   step: Step;
   index: number;
   moveStep: (from: number, to: number) => void;
   type: string;
-  deleteStep: (id: string) => void;
   editStep: (step: Step) => void;
 }
 
-const DraggableStep: React.FC<DraggableStepProps> = ({ step, index, moveStep, type, deleteStep, editStep }) => {
+const DraggableStep: React.FC<DraggableStepProps> = ({ step, index, moveStep, type, editStep }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const { deleteStepFromRoute } = useRouteContext();
 
   const [, drop] = useDrop({
     accept: type,
@@ -52,25 +53,25 @@ const DraggableStep: React.FC<DraggableStepProps> = ({ step, index, moveStep, ty
   if (isDragging && 0) return;
 
   return (
-    <div ref={ref} className={`drag-task ${step.type + '-class'}`}>
+    <div ref={ref} className={`drag-task-container ${step.type + '-class'}`}>
 
-      <div className='task-body'>
-        <p>{step.task}</p>
+      <div className='route-col'>
+        <p className='step-content'>{step.task}</p>
       </div>
 
-      <div className='input-body'>
-        <p>{step.input}</p>
+      <div className='route-col'>
+        <p className='step-content'>{step.input}</p>
       </div>
 
-      <div className='reward-body'>
-        <p>{step.outputName}</p>
+      <div className='route-col'>
+        <p className='step-content'>{step.outputName}</p>
       </div>
 
       <div className='button-container'>
         <button onClick={() => editStep(step)} className='update-task'>
           <FaEdit />
         </button>
-        <button onClick={() => deleteStep(step.id)} className='delete-task'>
+        <button onClick={() => deleteStepFromRoute(step.id)} className='delete-task'>
           <BsTrash />
         </button>
       </div>

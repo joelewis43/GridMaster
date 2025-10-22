@@ -40,8 +40,8 @@ const Grid: React.FC<GridProps> = ({ }) => {
   }
 
   return (
-    <div>
-      <Button onClick={handleFlipTiles}>
+    <div className='grid-div'>
+      <Button className='grid-button' onClick={handleFlipTiles}>
         {showRewardTile ? 'Show Tasks' : 'Show Rewards'}
       </Button>
       <Container className='container-fluid'>

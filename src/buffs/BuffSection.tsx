@@ -8,8 +8,10 @@ interface BuffSectionProps {
 
 const BuffSection: React.FC<BuffSectionProps> = ({ buffs }) => {
 
+  const className = buffs.length > 0 ? 'buff-icon' : "";
+
   return (
-      <div className='buff-icon'>
+      <div className={className}>
         {buffs.map(tile => (
           <Icon row={tile.row} col={tile.col} description={tile.reward.name} opaque={false} reward={true} />
         ))}

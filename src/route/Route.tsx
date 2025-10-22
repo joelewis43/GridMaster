@@ -11,7 +11,7 @@ interface RouteProps {
 }
 
 const Route: React.FC<RouteProps> = ({ }) => {
-  const { route, setRoute, editRouteStep, deleteStepFromRoute } = useRouteContext();
+  const { route, setRoute, editRouteStep } = useRouteContext();
   const [showEditStep, setShowEditStep] = useState(false);
   const [selectedStep, setSelectedStep] = useState<Step>();
 
@@ -26,7 +26,7 @@ const Route: React.FC<RouteProps> = ({ }) => {
     );
   }, []);
 
-  
+
   const flipEditStep = () => { setShowEditStep(!showEditStep) }
   const startEditStep = (step: Step) => {
     setSelectedStep(step);
@@ -36,21 +36,23 @@ const Route: React.FC<RouteProps> = ({ }) => {
   return (
     <div className='route-container'>
       <div className='task-list-header'>
-        <h4 className='task-body'>Step</h4>
-        <h4 className='input-body'>Input</h4>
-        <h4 className='output-body'>Output</h4>
+        <h4 className='route-col'>Step</h4>
+        <h4 className='route-col'>Input</h4>
+        <h4 className='route-col'>Output</h4>
       </div>
-      {route.map((step, index) => (
-        <DraggableStep
-          key={step.id}
-          index={index}
-          step={step}
-          moveStep={moveStep}
-          type={ItemType}
-          deleteStep={deleteStepFromRoute}
-          editStep={startEditStep}
-        />
-      ))}
+      <hr />
+      <div className='step-container'>
+        {route.map((step, index) => (
+          <DraggableStep
+            key={step.id}
+            index={index}
+            step={step}
+            moveStep={moveStep}
+            type={ItemType}
+            editStep={startEditStep}
+          />
+        ))}
+      </div>
       <StepModal show={showEditStep} onClose={flipEditStep} onSubmit={editRouteStep} initialStep={selectedStep} />
     </div>
   );

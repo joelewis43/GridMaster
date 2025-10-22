@@ -26,10 +26,10 @@ const Buffs: React.FC<BuffsProps> = () => {
   );
 
   return (
-    <div className='buff-tabs'>
-      <Tabs defaultActiveKey={RewardType.Relic} id="buffs-tabs" className="mb-3" fill>
+    <div className='buff-tabs-container'>
+      <Tabs defaultActiveKey={RewardType.Relic} className="tabs-class" fill>
         {Object.values(RewardType).map(type => (
-          <Tab key={type} eventKey={type} title={type}>
+          <Tab key={type} eventKey={type} title={type} className='tab-class'>
             <BuffSection buffs={groupedTiles[type]} />
           </Tab>
         ))}

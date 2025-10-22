@@ -1,15 +1,38 @@
 .buff-icon {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  padding: 5px;
+  gap: 10px;
   justify-content: space-evenly;
 }
 
-.buff-tabs {
-  padding: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-
-  background-color: rgb(128, 123, 123);
+.buff-tabs-container {
   border-radius: 20px;
+  background-color: #93A8AC;
+  min-height: 40px;
+}
+
+.tabs-class {
+  border-bottom: 0;
+}
+
+.tabs-class .nav-link {
+  color: black;
+  border-radius: 20px;
+  border: 0;
+}
+
+.tabs-class .nav-link.active {
+  color: black;
+  background-color: #D7CEB2;
+  border: 0;
+}
+
+.tabs-class .nav-link:hover {
+  background-color: #d7ceb27a;
+  border: 0;
+}
+
+.tab-class {
+  /* background-color: #93A8AC; */
 }

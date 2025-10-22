@@ -3,17 +3,17 @@
   text-align: center;
   margin: 0 auto;
   background-color:#4C5760;
-  padding-top: 10px;
 }
 
 .app-container {
   width: 90%;
   margin: 0 auto;
-  height: 100vh; /* Optional: take full viewport height */
+  height: 100dvh;
 }
 
 .app-body { 
   display: flex;
+  padding-top: 10px;
 }
 
 .grid-parent {
