@@ -1,13 +1,12 @@
 import React from 'react';
-import type { Step } from '../types';
-import { Button } from 'react-bootstrap';
 import { FaDownload } from "react-icons/fa";
+import { useRouteContext } from '../providers/RouteProvider';
 
 interface ExportButtonProps {
-  route: Step[];
 }
 
-const ExportButton: React.FC<ExportButtonProps> = ({ route }) => {
+const ExportButton: React.FC<ExportButtonProps> = ({  }) => {
+  const { route } = useRouteContext();
   const handleExport = () => {
     const json = JSON.stringify(route, null, 2); // pretty print with 2-space indent
     const blob = new Blob([json], { type: 'application/json' });
@@ -22,9 +21,7 @@ const ExportButton: React.FC<ExportButtonProps> = ({ route }) => {
   };
 
   return (
-    <Button variant="secondary" onClick={handleExport}>
-      <FaDownload/>
-    </Button>
+    <FaDownload className='nav-clickable' onClick={handleExport}/>
   );
 };
 

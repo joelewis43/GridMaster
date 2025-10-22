@@ -10,6 +10,7 @@ import '../style/Border.css';
 import '../style/Route.css';
 import '../style/Buff.css';
 import '../style/Icon.css';
+import '../style/Nav.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

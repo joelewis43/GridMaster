@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import type { Step } from '../types';
 import { FaUpload } from "react-icons/fa";
 
@@ -49,9 +48,7 @@ const ImportButton: React.FC<ImportButtonProps> = ({ onImport }) => {
         onChange={handleFileChange}
         style={{ display: 'none' }}
       />
-      <Button variant="secondary" onClick={handleClick}>
-        <FaUpload/>
-      </Button>
+      <FaUpload className='nav-clickable' onClick={handleClick} />
     </>
   );
 };

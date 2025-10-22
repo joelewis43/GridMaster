@@ -2,8 +2,7 @@ import React, { useState, useCallback } from 'react';
 import update from 'immutability-helper';
 import type { Step } from '../types';
 import DraggableStep from './DraggableStep';
-import ControlBar from './ControlBar';
-import TaskModal from './StepModal';
+import StepModal from './StepModal';
 import { useRouteContext } from '../providers/RouteProvider';
 
 const ItemType = 'TILE';
@@ -12,8 +11,7 @@ interface RouteProps {
 }
 
 const Route: React.FC<RouteProps> = ({ }) => {
-  const { route, setRoute, appendRoute, editRouteStep, deleteStepFromRoute } = useRouteContext();
-  const [showAddStep, setShowAddStep] = useState(false);
+  const { route, setRoute, editRouteStep, deleteStepFromRoute } = useRouteContext();
   const [showEditStep, setShowEditStep] = useState(false);
   const [selectedStep, setSelectedStep] = useState<Step>();
 
@@ -28,7 +26,7 @@ const Route: React.FC<RouteProps> = ({ }) => {
     );
   }, []);
 
-  const flipAddStep = () => { setShowAddStep(!showAddStep) }
+  
   const flipEditStep = () => { setShowEditStep(!showEditStep) }
   const startEditStep = (step: Step) => {
     setSelectedStep(step);
@@ -37,7 +35,6 @@ const Route: React.FC<RouteProps> = ({ }) => {
 
   return (
     <div className='route-container'>
-      <ControlBar openAddStep={flipAddStep} routeForExport={route} />
       <div className='task-list-header'>
         <h4 className='task-body'>Step</h4>
         <h4 className='input-body'>Input</h4>
@@ -54,10 +51,7 @@ const Route: React.FC<RouteProps> = ({ }) => {
           editStep={startEditStep}
         />
       ))}
-
-      {/* used for add task */}
-      <TaskModal show={showAddStep} onClose={flipAddStep} onSubmit={appendRoute} />
-      <TaskModal show={showEditStep} onClose={flipEditStep} onSubmit={editRouteStep} initialStep={selectedStep} />
+      <StepModal show={showEditStep} onClose={flipEditStep} onSubmit={editRouteStep} initialStep={selectedStep} />
     </div>
   );
 };
