@@ -27,7 +27,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ show, onClose }) => {
         <ul>
           <li>Click on grid tiles to see their associated reward and description, double click to add them to your route</li>
           <li>As you add grid tiles to the route, the rewards you'll get are added to the reward display under the grid</li>
-          <li>Use the + button on the nav to add custom steps in your route like traveling to talking to an NPC</li>
+          <li>Use the + button on the nav to add custom steps in your route like traveling or talking to an NPC</li>
           <li>You can import and export your route from the nav as well</li>
         </ul>
       </Modal.Body>
