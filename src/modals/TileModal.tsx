@@ -21,7 +21,7 @@ const TileModal: React.FC<TileModalProps> = ({ tile, show, onClose }) => {
       <Modal.Body className='grid-modal'>
         <h5>Task: {tile.task.name}</h5>
         <h5>Reward: {tile.reward.name}</h5>
-        <p>Description: {tile.reward.description || 'No reward description is available.'}</p>
+        <p style={{ whiteSpace: 'pre-wrap' }}>Description: {tile.reward.description || 'No reward description is available.'}</p>
         <div className='modal-buttons'>
           <Button className='modal-button' onClick={onClose}>
             Close

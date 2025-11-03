@@ -5,7 +5,7 @@
     "difficulty": "Hard",
     "task": "Defeat the Doom of Mokhaiotl at depth 8 or deeper",
     "rewardName": "Avernic Treads (Max)",
-    "rewardDescription": "",
+    "rewardDescription": "Best in slot boots for free. No need to camp Doom.",
     "rewardType": "Item"
   },
   {
@@ -14,7 +14,7 @@
     "difficulty": "Hard",
     "task": "Defeat Sol Heredit",
     "rewardName": "Specialist",
-    "rewardDescription": "",
+    "rewardDescription": "It gives the following benefits to special attacks:\n- All special attacks cost 20% and have +100% accuracy.\n- For each failed accuracy roll with a special attack, gain 10% Special Attack Energy.\n- Whenever you kill an NPC, restore 15% Special Attack Energy (the npc does NOT need to be killed via special attack).",
     "rewardType": "Relic"
   },
   {
@@ -23,7 +23,7 @@
     "difficulty": "Medium",
     "task": "Fully decorate a magic totem in the Auburn Valley",
     "rewardName": "Devil's element",
-    "rewardDescription": "",
+    "rewardDescription": "Provides unlimited elemental runes when equipped. Includes a passive effect where attacks will double an NPC's elemental weakness.",
     "rewardType": "Item"
   },
   {
@@ -32,7 +32,7 @@
     "difficulty": "Easy",
     "task": "Kill an Ogress",
     "rewardName": "Combatant",
-    "rewardDescription": "",
+    "rewardDescription": "Select three combat skills, then whenever you gain XP in one of the selected skills, you'll gain 50% of that XP in the other two selected skills.\nOptions are: Attack, Strength, Defence, Hitpoints, Ranged, Magic, and Prayer",
     "rewardType": "Relic"
   },
   {
@@ -41,7 +41,7 @@
     "difficulty": "Medium",
     "task": "Defeat Jal-Zek within the Inferno",
     "rewardName": "Slayer Master",
-    "rewardDescription": "",
+    "rewardDescription": "Allows a player to always be on-task for all Slayer monsters and unlock all slayer task perks for free.",
     "rewardType": "Relic"
   },
   {
@@ -50,7 +50,7 @@
     "difficulty": "Hard",
     "task": "Obtain a rare drop from Yama",
     "rewardName": "Last Stand",
-    "rewardDescription": "",
+    "rewardDescription": "Gives the Last Stand ability, which works as follows:\n - If damage would reduce the player's HP to 0, instead of dying, the player will instead survive with 1 HP.\n - All combat stats are instantly boosted to 255 but begin draining rapidly back down to +15 above their base level.\n - For the next 16 ticks (9.6 seconds) after this ability is activated, the player's HP cannot be reduced to zero.\n - When the effect ends, all incoming damage is nullified and the player is healed based on the damage they dealt over the last 16 ticks.\n\nOnce this ability is used, it has a three-minute cooldown before it can activate again. Dying during the cooldown will be treated like a normal death, but instantly reset the cooldown. ",
     "rewardType": "Relic"
   },
   {
@@ -68,7 +68,7 @@
     "difficulty": "Hard",
     "task": "Reach 2,000 total level",
     "rewardName": "All combat achievements completed",
-    "rewardDescription": "",
+    "rewardDescription": "Automatically completes all CAs and grants the player all rewards from the Grandmaster CA tier. All rewards including lamps are claimable.",
     "rewardType": "Questline"
   },
   {
@@ -76,8 +76,8 @@
     "col": "2",
     "difficulty": "Medium",
     "task": "Subdue the Moons of Peril",
-    "rewardName": "Increase XP gain by 200% for all skills.",
-    "rewardDescription": "",
+    "rewardName": "XP Multiplier",
+    "rewardDescription": "Increase XP gain by 200% for all skills.",
     "rewardType": "Multiplier"
   },
   {
@@ -86,7 +86,7 @@
     "difficulty": "Medium",
     "task": "Obtain a rare drop from The Hueycoatl",
     "rewardName": "Auto-complete While Guthix Sleeps",
-    "rewardDescription": "",
+    "rewardDescription": "Auto completes the While Guthix Sleeps quest as well as all sub-quests. Notably completes:\n - Defender of Varrock\n - Dream Mentor\n - Eadgar's Ruse",
     "rewardType": "Questline"
   },
   {
@@ -94,8 +94,8 @@
     "col": "4",
     "difficulty": "Easy",
     "task": "Reach a total skill level of 500.",
-    "rewardName": "An event lamp containing 25,000 XP to be used on any skill",
-    "rewardDescription": "",
+    "rewardName": "XP Lamp",
+    "rewardDescription": "An event lamp containing 25,000 XP to be used on any skill",
     "rewardType": "Experience"
   },
   {
@@ -104,7 +104,7 @@
     "difficulty": "Medium",
     "task": "Cook a shark while wearing a chef's hat",
     "rewardName": "Corrupted Shark",
-    "rewardDescription": "",
+    "rewardDescription": "The corrupted shark is not consumed when eaten and heals a base 20 hitpoints.",
     "rewardType": "Item"
   },
   {
@@ -113,7 +113,7 @@
     "difficulty": "Medium",
     "task": "Defeat Zulrah with a blowpipe",
     "rewardName": "Auto-complete Monkey Madness II",
-    "rewardDescription": "",
+    "rewardDescription": "Auto completes the Monkey Madness II quest and all sub-quests.",
     "rewardType": "Questline"
   },
   {
@@ -139,8 +139,8 @@
     "col": "2",
     "difficulty": "Medium",
     "task": "Obtain a rare unique from the Barrows chest while wearing some Barrows equipment",
-    "rewardName": "Increase XP gain by 200% for all skills.",
-    "rewardDescription": "",
+    "rewardName": "XP Multiplier",
+    "rewardDescription": "Increase XP gain by 200% for all skills.",
     "rewardType": "Multiplier"
   },
   {
@@ -427,8 +427,8 @@
     "col": "6",
     "difficulty": "Hard",
     "task": "Obtain a rare drop from Araxxor",
-    "rewardName": "Increase XP gain by 200% for all skills.",
-    "rewardDescription": "",
+    "rewardName": "XP Multiplier",
+    "rewardDescription": "Increase XP gain by 200% for all skills.",
     "rewardType": "Multiplier"
   },
   {
